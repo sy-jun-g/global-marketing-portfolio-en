@@ -31,7 +31,7 @@ nav {
 .b1 { width:420px; height:420px; background:#FFB3C6; top:-120px; right:-100px; }
 .b2 { width:320px; height:320px; background:#FFE034; bottom:0; right:200px; }
 .b3 { width:260px; height:260px; background:#A8D8F0; top:200px; left:-80px; }
-.hero-inner { position:relative; z-index:1; max-width:800px; }
+.hero-inner { position:relative; z-index:1; max-width:680px; }
 .hero-eyebrow { font-family:'DM Mono',monospace; font-size:0.72rem; color:#FF8FAB; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:1.2rem; opacity:0; animation:fadeUp 0.7s ease 0.1s forwards; }
 .hero-name { font-family:'Bebas Neue',sans-serif; font-size:clamp(60px,10vw,120px); line-height:0.9; letter-spacing:-0.01em; color:#2d2d2d; margin-bottom:2rem; opacity:0; animation:fadeUp 0.7s ease 0.3s forwards; }
 .hero-name .pink { color:#FF8FAB; }
@@ -59,7 +59,7 @@ nav {
 
 /* ABOUT */
 .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
-.about-p { color:#555; font-size:1rem; line-height:1.85; margin-bottom:1.4rem; font-weight:400; }
+.about-p { color:#555; font-size:1.1rem; line-height:1.85; margin-bottom:1.4rem; font-weight:400; }
 .about-p strong { color:#2d2d2d; font-weight:800; }
 .stats-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
 .stat { background:#fffdf9; padding:1.8rem; border-radius:16px; border:2px solid #FFB3C6; box-shadow:0 2px 12px rgba(0,0,0,0.05); }
@@ -82,7 +82,7 @@ nav {
 .exp-rl { font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#FF8FAB; }
 .exp.y .exp-rl { color:#b38f00; }
 .exp.b .exp-rl { color:#5BBFEA; }
-.exp-desc { color:#555; font-size:0.92rem; line-height:1.8; margin-bottom:1.4rem; }
+.exp-desc { color:#555; font-size:1rem; line-height:1.8; margin-bottom:1.4rem; }
 .kpis { display:flex; flex-wrap:wrap; gap:0.5rem; }
 .kpi { font-family:'DM Mono',monospace; font-size:0.67rem; padding:0.33rem 0.8rem; border-radius:20px; background:rgba(255,143,171,0.12); color:#FF8FAB; border:1px solid rgba(255,143,171,0.3); }
 .exp.y .kpi { background:rgba(179,143,0,0.1); color:#b38f00; border-color:rgba(179,143,0,0.3); }
@@ -128,7 +128,7 @@ nav {
 .sg.y .sg-title { color:#b38f00; }
 .sg.b .sg-title { color:#5BBFEA; }
 .sk-list { display:flex; flex-direction:column; gap:0.6rem; }
-.sk { font-size:0.84rem; color:#555; display:flex; align-items:center; gap:0.5rem; font-weight:600; }
+.sk { font-size:0.95rem; color:#555; display:flex; align-items:center; gap:0.5rem; font-weight:600; }
 .sk::before { content:'✦'; font-size:0.6rem; color:#FF8FAB; }
 .sg.y .sk::before { color:#b38f00; }
 .sg.b .sk::before { color:#5BBFEA; }
@@ -139,7 +139,7 @@ nav {
 .cert.p { border-color:#FFB3C6; }
 .cert-ico { width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:1.1rem; flex-shrink:0; background:rgba(168,216,240,0.3); color:#5BBFEA; }
 .cert.p .cert-ico { background:rgba(255,179,198,0.3); color:#FF8FAB; }
-.cert-name { font-size:0.87rem; font-weight:700; color:#2d2d2d; margin-bottom:0.2rem; }
+.cert-name { font-size:0.97rem; font-weight:700; color:#2d2d2d; margin-bottom:0.2rem; }
 .cert-issuer { font-family:'DM Mono',monospace; font-size:0.6rem; color:#999; letter-spacing:0.08em; text-transform:uppercase; }
 
 /* GLOBAL */
@@ -148,10 +148,10 @@ nav {
 .tl.y { border-color:#FFE034; }
 .tl.p { border-color:#FFB3C6; }
 .tl.p2 { border-color:#FF8FAB; }
-.tl-flag { font-size:2.4rem; margin-bottom:0.7rem; display:block; }
+.tl-flag { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.08em; color:#2d2d2d; margin-bottom:0.5rem; display:block; }
 .tl-period { font-family:'DM Mono',monospace; font-size:0.65rem; color:#999; letter-spacing:0.1em; margin-bottom:0.4rem; }
 .tl-loc { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.05em; color:#2d2d2d; margin-bottom:0.5rem; }
-.tl-desc { font-size:0.84rem; color:#666; line-height:1.65; }
+.tl-desc { font-size:0.94rem; color:#666; line-height:1.65; }
 
 /* LANGUAGES */
 .lang-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
@@ -171,7 +171,7 @@ nav {
 .ai-lbl { font-family:'DM Mono',monospace; font-size:0.68rem; color:#FFE034; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1rem; position:relative; z-index:1; }
 .ai-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,6vw,80px); color:#fffdf9; line-height:0.95; margin-bottom:1.5rem; letter-spacing:-0.01em; position:relative; z-index:1; }
 .ai-title span { color:#FFE034; }
-.ai-txt { font-size:0.93rem; color:rgba(255,253,249,0.6); max-width:580px; margin:0 auto 2rem; line-height:1.8; position:relative; z-index:1; }
+.ai-txt { font-size:1rem; color:rgba(255,253,249,0.6); max-width:580px; margin:0 auto 2rem; line-height:1.8; position:relative; z-index:1; }
 .ai-tags { display:flex; justify-content:center; flex-wrap:wrap; gap:0.7rem; position:relative; z-index:1; }
 .ai-tag { background:rgba(255,255,255,0.07); color:rgba(255,253,249,0.75); font-family:'DM Mono',monospace; font-size:0.67rem; padding:0.4rem 1rem; border-radius:20px; border:1px solid rgba(255,255,255,0.1); }
 
@@ -179,7 +179,7 @@ nav {
 .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
 .contact-big { font-family:'Bebas Neue',sans-serif; font-size:clamp(48px,7vw,90px); line-height:0.9; letter-spacing:-0.01em; color:#2d2d2d; }
 .contact-big .cp { color:#FF8FAB; display:block; }
-.contact-sub { font-size:0.9rem; color:#888; margin-top:2rem; line-height:1.7; max-width:360px; }
+.contact-sub { font-size:1rem; color:#888; margin-top:2rem; line-height:1.7; max-width:360px; }
 .c-links { display:flex; flex-direction:column; gap:12px; }
 .c-link { display:flex; align-items:center; gap:1.2rem; text-decoration:none; padding:1.5rem 1.8rem; background:#fffdf9; border-radius:16px; border:2px solid #FFB3C6; box-shadow:0 2px 8px rgba(0,0,0,0.04); color:#2d2d2d; }
 .c-link.b { border-color:#A8D8F0; }
@@ -218,7 +218,7 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <span class="ai-badge">✦ Built with Claude AI</span>
+  <span class="ai-badge">✦ Built with AI Tools</span>
 </nav>
 
 <section id="hero">
@@ -231,10 +231,13 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
     <div class="fun-cards">
       <div class="fun-card">🐰 Usahana obsessed</div>
       <div class="fun-card y">🐕 Proud dog mom</div>
-      <div class="fun-card b">📚 Bookworm</div>
-      <div class="fun-card">🤖 WALL-E is my favorite movie</div>
-      <div class="fun-card y">🌏 Lived in 4 countries</div>
-      <div class="fun-card b">💄 Beauty & makeup lover</div>
+      <div class="fun-card b">🤖 AI user</div>
+      <div class="fun-card">🌏 International background</div>
+      <div class="fun-card y">💄 Beauty & makeup lover</div>
+      <div class="fun-card b">💻 Always online</div>
+      <div class="fun-card">👗Learning fasion</div>
+      <div class="fun-card y">🎤 K-POP listener</div>
+      <div class="fun-card b">🖼️ Into 2D</div>
     </div>
     <p class="hero-transition">Okay, now that you know me as a person...<br><strong>let me tell you what I do for work. 👇</strong></p>
     <div class="hero-cta">
@@ -271,8 +274,8 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
 
 <!-- EXPERIENCE -->
 <section id="experience" class="sec" style="background:#fffdf9;">
-  <div class="sec-label">Experience</div>
-  <h2 class="sec-title reveal">Work.</h2>
+  <div class="sec-label">Work</div>
+  <h2 class="sec-title reveal">Experience.</h2>
   <div class="exp reveal">
     <div class="exp-hd">
       <div><div class="exp-co">Penta Security</div><div class="exp-rl">Global Marketer</div></div>
@@ -443,6 +446,17 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
   <div class="sec-label">Skills</div>
   <h2 class="sec-title reveal">What I Do.</h2>
   <div class="skills-grid reveal">
+    <div class="sg b">
+      <div class="sg-title">Data & Tech</div>
+      <div class="sk-list">
+        <span class="sk">Google Analytics (GA4)</span>
+        <span class="sk">BigQuery</span>
+        <span class="sk">SQL / Python</span>
+        <span class="sk">Semrush</span>
+        <span class="sk">AI Tools (Claude, ChatGPT)</span>
+        <span class="sk">Full-stack (Flutter, NestJS)</span>
+      </div>
+    </div>
     <div class="sg">
       <div class="sg-title">Growth & Content</div>
       <div class="sk-list">
@@ -466,17 +480,6 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
         <span class="sk">KakaoTalk</span>
       </div>
     </div>
-    <div class="sg b">
-      <div class="sg-title">Data & Tech</div>
-      <div class="sk-list">
-        <span class="sk">Google Analytics (GA4)</span>
-        <span class="sk">BigQuery</span>
-        <span class="sk">SQL / Python</span>
-        <span class="sk">Semrush</span>
-        <span class="sk">AI Tools (Claude, ChatGPT)</span>
-        <span class="sk">Full-stack (Flutter, NestJS)</span>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -494,34 +497,25 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
 <!-- GLOBAL -->
 <section id="global" class="sec" style="background:#fffdf9;">
   <div class="sec-label">Global Background</div>
-  <h2 class="sec-title reveal">12+ Years.<br>4 Countries.</h2>
+  <h2 class="sec-title reveal">12+ Years.<br>4 Countries.<br>3 Languages.</h2>
   <div class="global-grid reveal">
-    <div class="tl"><span class="tl-flag">🇺🇸</span><div class="tl-period">2008 — 2012</div><div class="tl-loc">North Carolina, USA</div><div class="tl-desc">Elementary school in English. The foundation of native-level fluency built young.</div></div>
-    <div class="tl y"><span class="tl-flag">🇦🇪</span><div class="tl-period">2014 — 2018</div><div class="tl-loc">Abu Dhabi, UAE</div><div class="tl-desc">Middle and high school entirely in English. Multicultural instincts developed in one of the world's most diverse cities.</div></div>
-    <div class="tl p"><span class="tl-flag">🇯🇵</span><div class="tl-period">2018 — 2022</div><div class="tl-loc">Tokyo, Japan</div><div class="tl-desc">B.A. at Keio University under Prof. Jun Murai. Developed professional Japanese through academics and work.</div></div>
-    <div class="tl p2"><span class="tl-flag">🇰🇷</span><div class="tl-period">2022 — Present</div><div class="tl-loc">Seoul, Korea</div><div class="tl-desc">Building a global marketing career at the intersection of tech, data, and cross-cultural communication.</div></div>
-  </div>
-</section>
+    <div class="tl"><span class="tl-flag">NORTH CAROLINA, USA</span><div class="tl-period">2008 — 2012</div><div class="tl-loc">English: Native Level</div><div class="tl-desc">Elementary school in English. The foundation of native-level fluency built young.</div></div>
+    <div class="tl y"><span class="tl-flag">ABU DHABI, UAE</span><div class="tl-period">2014 — 2018</div><div class="tl-loc">English: Native Level</div><div class="tl-desc">Middle and high school entirely in English. Multicultural instincts developed in one of the world's most diverse cities.</div></div>
+    <div class="tl p"><span class="tl-flag">TOKYO, JAPAN</span><div class="tl-period">2018 — 2022</div><div class="tl-loc">Japanese: Conversational</div><div class="tl-desc">B.A. at Keio University under Prof. Jun Murai. Developed professional Japanese through academics and work.</div></div>
+    <div class="tl p2"><span class="tl-flag">SEOUL, KOREA</span><div class="tl-period">2022 — Present</div><div class="tl-loc">Korean: Native</div><div class="tl-desc">Building a global marketing career at the intersection of tech, data, and cross-cultural communication.</div></div>
 
-<!-- LANGUAGES -->
-<section id="languages" class="sec" style="background:#faf8f5;">
-  <div class="sec-label">Languages</div>
-  <h2 class="sec-title reveal">Multilingual.</h2>
-  <div class="lang-grid reveal">
-    <div class="lang"><span class="lang-flag">🇺🇸</span><div class="lang-name">English</div><div class="lang-lvl">Native-level · 12+ Years</div></div>
-    <div class="lang p"><span class="lang-flag">🇰🇷</span><div class="lang-name">Korean</div><div class="lang-lvl">Native</div></div>
-    <div class="lang y"><span class="lang-flag">🇯🇵</span><div class="lang-name">Japanese</div><div class="lang-lvl">Professional Working</div></div>
   </div>
+
 </section>
 
 <!-- AI NOTE -->
 <div id="ai-note">
   <div class="ab ab1"></div><div class="ab ab2"></div><div class="ab ab3"></div>
-  <div class="ai-lbl">✦ AI-Powered Portfolio</div>
-  <h2 class="ai-title">Built With<br><span>Claude AI.</span></h2>
-  <p class="ai-txt">This portfolio was built in collaboration with Claude (Anthropic). It reflects my belief that great marketers in 2026 don't just use AI as a tool, but as a creative partner to move faster and think bigger.</p>
+  <div class="ai-lbl">✦ AI-Assisted Portfolio</div>
+  <h2 class="ai-title">Built With<br><span>AI Tools.</span></h2>
+  <p class="ai-txt">This portfolio was built in collaboration with AI tools. It reflects my belief that great marketers in 2026 don't just use AI as a tool, but as a creative partner to move faster and think bigger.</p>
   <div class="ai-tags">
-    <span class="ai-tag">Claude (Anthropic)</span>
+    <span class="ai-tag">AI Tools</span>
     <span class="ai-tag">Resume Writing</span>
     <span class="ai-tag">Content Strategy</span>
     <span class="ai-tag">Portfolio Design</span>
@@ -539,7 +533,7 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
       <p class="contact-sub">Open to global marketing, account management, and social marketing roles at global tech companies operating in Korea.</p>
     </div>
     <div class="c-links reveal">
-      <a class="c-link"><div><span class="c-lbl">Email</span><span class="c-val"><span class="__cf_email__" data-cfemail="fc9b99988b8bccccbc9b919d9590d29f9391">gedww00@gmail.com</span></span></div></a>
+      <a href=""><div><span class="c-lbl">Email</span><span class="c-val"><span class="__cf_email__" data-cfemail="fc9b99988b8bccccbc9b919d9590d29f9391">gedww00@gmail.com</span></span></div></a>
       <a href="https://linkedin.com/in/seo-yeon-jung-544682373" target="_blank" class="c-link b"><div><span class="c-lbl">LinkedIn</span><span class="c-val">linkedin.com/in/seo-yeon-jung</span></div></a>
     </div>
   </div>
@@ -547,7 +541,7 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
 
 <footer>
   <p>© 2026 Seo yeon Jung (Wawa) · Seoul, Korea</p>
-  <p>Built with Claude AI 🐰</p>
+  <p>Built in collaboration with AI tools 🐰</p>
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
