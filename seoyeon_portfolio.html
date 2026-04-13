@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seo yeon Jung — Global Marketer</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@300;400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { background:#fffdf9; color:#2d2d2d; font-family:'Nunito',sans-serif; overflow-x:hidden; }
+
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1.2rem 4rem;
+  background:rgba(255,253,249,0.93);
+  backdrop-filter:blur(12px);
+  border-bottom:2.5px solid #FFB3C6;
+}
+.nav-logo { font-family:'Bebas Neue',sans-serif; font-size:1.5rem; letter-spacing:0.08em; color:#2d2d2d; text-decoration:none; }
+.nav-logo span { color:#FF8FAB; }
+.nav-links { display:flex; gap:2.5rem; list-style:none; }
+.nav-links a { color:#999; text-decoration:none; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:700; transition:color 0.2s; }
+.nav-links a:hover { color:#FF8FAB; }
+.ai-badge { font-family:'DM Mono',monospace; font-size:0.62rem; color:#5BBFEA; border:1.5px solid #5BBFEA; padding:0.3rem 0.8rem; border-radius:20px; background:rgba(91,191,234,0.1); }
+
+/* HERO */
+#hero { min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:8rem 4rem 6rem; position:relative; overflow:hidden; }
+.blob { position:absolute; border-radius:50%; filter:blur(70px); opacity:0.3; z-index:0; }
+.b1 { width:420px; height:420px; background:#FFB3C6; top:-120px; right:-100px; }
+.b2 { width:320px; height:320px; background:#FFE034; bottom:0; right:200px; }
+.b3 { width:260px; height:260px; background:#A8D8F0; top:200px; left:-80px; }
+.hero-inner { position:relative; z-index:1; max-width:800px; }
+.hero-eyebrow { font-family:'DM Mono',monospace; font-size:0.72rem; color:#FF8FAB; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:1.2rem; opacity:0; animation:fadeUp 0.7s ease 0.1s forwards; }
+.hero-name { font-family:'Bebas Neue',sans-serif; font-size:clamp(60px,10vw,120px); line-height:0.9; letter-spacing:-0.01em; color:#2d2d2d; margin-bottom:2rem; opacity:0; animation:fadeUp 0.7s ease 0.3s forwards; }
+.hero-name .pink { color:#FF8FAB; }
+.fun-cards { display:flex; flex-wrap:wrap; gap:0.7rem; margin-bottom:2.5rem; opacity:0; animation:fadeUp 0.7s ease 0.5s forwards; }
+.fun-card { background:#fffdf9; border:2px solid #FFB3C6; border-radius:16px; padding:0.65rem 1.1rem; font-size:0.88rem; font-weight:700; color:#2d2d2d; display:flex; align-items:center; gap:0.5rem; box-shadow:3px 3px 0 #FFB3C6; }
+.fun-card.y { border-color:#F5C800; box-shadow:3px 3px 0 #F5C800; }
+.fun-card.b { border-color:#5BBFEA; box-shadow:3px 3px 0 #5BBFEA; }
+.hero-transition { font-size:1.05rem; color:#2d2d2d; line-height:1.85; border-left:4px solid #F5C800; padding-left:1.2rem; max-width:540px; opacity:0; animation:fadeUp 0.7s ease 0.7s forwards; }
+.hero-transition strong { font-weight:800; color:#FF8FAB; }
+.hero-cta { display:flex; gap:1rem; margin-top:2.5rem; opacity:0; animation:fadeUp 0.7s ease 0.9s forwards; }
+.btn-p { background:#FF8FAB; color:white; padding:0.85rem 2rem; font-family:'Nunito',sans-serif; font-weight:800; font-size:0.82rem; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none; border-radius:10px; box-shadow:4px 4px 0 #FFB3C6; display:inline-block; }
+.btn-o { color:#2d2d2d; border:2px solid #2d2d2d; padding:0.85rem 2rem; font-size:0.82rem; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none; border-radius:10px; font-weight:800; box-shadow:4px 4px 0 rgba(0,0,0,0.1); display:inline-block; }
+
+/* MARQUEE */
+.mq-wrap { overflow:hidden; padding:0.9rem 0; background:#FFE034; border-top:2px solid #F5C800; border-bottom:2px solid #F5C800; }
+.mq { display:flex; gap:2.5rem; animation:marquee 22s linear infinite; white-space:nowrap; }
+.mq span { font-family:'Bebas Neue',sans-serif; font-size:1rem; letter-spacing:0.1em; color:#2d2d2d; flex-shrink:0; opacity:0.65; }
+.mq span.ac { color:#FF8FAB; opacity:1; }
+
+/* SECTION BASE */
+.sec { padding:7rem 4rem; }
+.sec-label { font-family:'DM Mono',monospace; font-size:0.68rem; color:#FF8FAB; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:0.8rem; display:flex; align-items:center; gap:0.8rem; }
+.sec-label::before { content:''; display:block; width:28px; height:2px; background:#FF8FAB; border-radius:2px; }
+.sec-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,5.5vw,72px); line-height:0.95; letter-spacing:-0.01em; margin-bottom:3.5rem; color:#2d2d2d; }
+
+/* ABOUT */
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
+.about-p { color:#555; font-size:1rem; line-height:1.85; margin-bottom:1.4rem; font-weight:400; }
+.about-p strong { color:#2d2d2d; font-weight:800; }
+.stats-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.stat { background:#fffdf9; padding:1.8rem; border-radius:16px; border:2px solid #FFB3C6; box-shadow:0 2px 12px rgba(0,0,0,0.05); }
+.stat.y { border-color:#F5C800; }
+.stat.b { border-color:#5BBFEA; }
+.stat.p2 { border-color:#FF8FAB; }
+.stat-n { font-family:'Bebas Neue',sans-serif; font-size:3rem; line-height:1; color:#FF8FAB; }
+.stat.y .stat-n { color:#b38f00; }
+.stat.b .stat-n { color:#5BBFEA; }
+.stat.p2 .stat-n { color:#FF8FAB; }
+.stat-l { font-size:0.7rem; color:#999; text-transform:uppercase; letter-spacing:0.08em; margin-top:0.5rem; font-weight:700; }
+
+/* EXPERIENCE */
+.exp { background:#fffdf9; border-radius:20px; padding:2.5rem; margin-bottom:14px; border:2px solid #FFB3C6; box-shadow:0 2px 12px rgba(0,0,0,0.04); }
+.exp.y { border-color:#F5C800; }
+.exp.b { border-color:#5BBFEA; }
+.exp-hd { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.2rem; }
+.exp-co { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.05em; color:#2d2d2d; }
+.exp-pd { font-family:'DM Mono',monospace; font-size:0.65rem; color:#999; letter-spacing:0.08em; display:block; margin-bottom:0.3rem; }
+.exp-rl { font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#FF8FAB; }
+.exp.y .exp-rl { color:#b38f00; }
+.exp.b .exp-rl { color:#5BBFEA; }
+.exp-desc { color:#555; font-size:0.92rem; line-height:1.8; margin-bottom:1.4rem; }
+.kpis { display:flex; flex-wrap:wrap; gap:0.5rem; }
+.kpi { font-family:'DM Mono',monospace; font-size:0.67rem; padding:0.33rem 0.8rem; border-radius:20px; background:rgba(255,143,171,0.12); color:#FF8FAB; border:1px solid rgba(255,143,171,0.3); }
+.exp.y .kpi { background:rgba(179,143,0,0.1); color:#b38f00; border-color:rgba(179,143,0,0.3); }
+.exp.b .kpi { background:rgba(91,191,234,0.12); color:#5BBFEA; border-color:rgba(91,191,234,0.3); }
+
+/* PROJECTS */
+.proj-card { background:#fffdf9; border-radius:24px; padding:2.5rem; margin-bottom:16px; border:2px solid #FFB3C6; }
+.proj-card.y { border-color:#F5C800; }
+.proj-card.b { border-color:#5BBFEA; }
+.proj-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:2rem; flex-wrap:wrap; gap:1rem; }
+.proj-num { font-family:'Bebas Neue',sans-serif; font-size:3.5rem; line-height:1; color:#2d2d2d; opacity:0.12; }
+.proj-ttl { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.05em; color:#2d2d2d; margin-top:0.3rem; }
+.proj-contrib { font-family:'DM Mono',monospace; font-size:0.65rem; color:#999; letter-spacing:0.1em; margin-top:0.4rem; }
+.proj-tags { display:flex; flex-wrap:wrap; gap:0.5rem; align-items:flex-start; }
+.ptag { font-family:'DM Mono',monospace; font-size:0.65rem; padding:0.35rem 0.9rem; border-radius:20px; background:#faf8f5; color:#2d2d2d; border:1.5px solid rgba(0,0,0,0.12); font-weight:500; }
+.ptag.ai { background:rgba(255,143,171,0.15); color:#FF8FAB; border-color:#FF8FAB; }
+.proj-grid { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; }
+.proj-lbl { font-family:'DM Mono',monospace; font-size:0.65rem; color:#FF8FAB; letter-spacing:0.15em; text-transform:uppercase; display:block; margin-bottom:0.5rem; margin-top:1.4rem; }
+.proj-card.y .proj-lbl { color:#b38f00; }
+.proj-card.b .proj-lbl { color:#5BBFEA; }
+.proj-lbl:first-child { margin-top:0; }
+.proj-txt { font-size:0.88rem; color:#444; line-height:1.8; }
+.proj-txt strong { color:#2d2d2d; font-weight:800; }
+.result-box { background:#faf8f5; border-radius:16px; padding:1.5rem; margin-top:1.4rem; border:2px solid #FFB3C6; }
+.proj-card.y .result-box { border-color:#F5C800; }
+.proj-card.b .result-box { border-color:#5BBFEA; }
+.result-lbl { font-family:'DM Mono',monospace; font-size:0.65rem; color:#FF8FAB; letter-spacing:0.15em; text-transform:uppercase; display:block; margin-bottom:1rem; }
+.proj-card.y .result-lbl { color:#b38f00; }
+.proj-card.b .result-lbl { color:#5BBFEA; }
+.result-row { display:flex; gap:1.5rem; flex-wrap:wrap; }
+.result-item {}
+.result-num { font-family:'Bebas Neue',sans-serif; font-size:2.2rem; line-height:1; display:block; color:#FF8FAB; }
+.proj-card.y .result-num { color:#b38f00; }
+.proj-card.b .result-num { color:#5BBFEA; }
+.result-desc { font-size:0.68rem; color:#999; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-top:0.2rem; }
+
+/* SKILLS */
+.skills-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.sg { background:#fffdf9; padding:2.2rem; border-radius:20px; border:2px solid #FFB3C6; }
+.sg.y { border-color:#F5C800; }
+.sg.b { border-color:#A8D8F0; }
+.sg-title { font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:0.08em; color:#FF8FAB; margin-bottom:1.4rem; }
+.sg.y .sg-title { color:#b38f00; }
+.sg.b .sg-title { color:#5BBFEA; }
+.sk-list { display:flex; flex-direction:column; gap:0.6rem; }
+.sk { font-size:0.84rem; color:#555; display:flex; align-items:center; gap:0.5rem; font-weight:600; }
+.sk::before { content:'✦'; font-size:0.6rem; color:#FF8FAB; }
+.sg.y .sk::before { color:#b38f00; }
+.sg.b .sk::before { color:#5BBFEA; }
+
+/* CERTS */
+.cert-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+.cert { background:#fffdf9; padding:1.7rem 2rem; border-radius:16px; display:flex; align-items:center; gap:1.2rem; border:2px solid #A8D8F0; box-shadow:0 2px 8px rgba(0,0,0,0.04); }
+.cert.p { border-color:#FFB3C6; }
+.cert-ico { width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:1.1rem; flex-shrink:0; background:rgba(168,216,240,0.3); color:#5BBFEA; }
+.cert.p .cert-ico { background:rgba(255,179,198,0.3); color:#FF8FAB; }
+.cert-name { font-size:0.87rem; font-weight:700; color:#2d2d2d; margin-bottom:0.2rem; }
+.cert-issuer { font-family:'DM Mono',monospace; font-size:0.6rem; color:#999; letter-spacing:0.08em; text-transform:uppercase; }
+
+/* GLOBAL */
+.global-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+.tl { background:#fffdf9; border-radius:16px; padding:2rem 2.2rem; border:2px solid #A8D8F0; }
+.tl.y { border-color:#FFE034; }
+.tl.p { border-color:#FFB3C6; }
+.tl.p2 { border-color:#FF8FAB; }
+.tl-flag { font-size:2.4rem; margin-bottom:0.7rem; display:block; }
+.tl-period { font-family:'DM Mono',monospace; font-size:0.65rem; color:#999; letter-spacing:0.1em; margin-bottom:0.4rem; }
+.tl-loc { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.05em; color:#2d2d2d; margin-bottom:0.5rem; }
+.tl-desc { font-size:0.84rem; color:#666; line-height:1.65; }
+
+/* LANGUAGES */
+.lang-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.lang { background:#fffdf9; padding:2.5rem 2rem; border-radius:20px; text-align:center; border:2px solid #A8D8F0; }
+.lang.p { border-color:#FFB3C6; }
+.lang.y { border-color:#F5C800; }
+.lang-flag { font-size:2.4rem; margin-bottom:1rem; display:block; }
+.lang-name { font-family:'Bebas Neue',sans-serif; font-size:2.2rem; letter-spacing:0.06em; color:#2d2d2d; margin-bottom:0.5rem; }
+.lang-lvl { font-family:'DM Mono',monospace; font-size:0.6rem; color:#999; letter-spacing:0.12em; text-transform:uppercase; font-weight:500; }
+
+/* AI */
+#ai-note { background:#2d2d2d; padding:5rem 4rem; text-align:center; position:relative; overflow:hidden; }
+.ab { position:absolute; border-radius:50%; filter:blur(80px); opacity:0.12; }
+.ab1{width:350px;height:350px;background:#FFB3C6;top:-80px;left:-80px;}
+.ab2{width:300px;height:300px;background:#FFE034;bottom:-80px;right:-80px;}
+.ab3{width:250px;height:250px;background:#A8D8F0;top:50%;right:10%;}
+.ai-lbl { font-family:'DM Mono',monospace; font-size:0.68rem; color:#FFE034; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1rem; position:relative; z-index:1; }
+.ai-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,6vw,80px); color:#fffdf9; line-height:0.95; margin-bottom:1.5rem; letter-spacing:-0.01em; position:relative; z-index:1; }
+.ai-title span { color:#FFE034; }
+.ai-txt { font-size:0.93rem; color:rgba(255,253,249,0.6); max-width:580px; margin:0 auto 2rem; line-height:1.8; position:relative; z-index:1; }
+.ai-tags { display:flex; justify-content:center; flex-wrap:wrap; gap:0.7rem; position:relative; z-index:1; }
+.ai-tag { background:rgba(255,255,255,0.07); color:rgba(255,253,249,0.75); font-family:'DM Mono',monospace; font-size:0.67rem; padding:0.4rem 1rem; border-radius:20px; border:1px solid rgba(255,255,255,0.1); }
+
+/* CONTACT */
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+.contact-big { font-family:'Bebas Neue',sans-serif; font-size:clamp(48px,7vw,90px); line-height:0.9; letter-spacing:-0.01em; color:#2d2d2d; }
+.contact-big .cp { color:#FF8FAB; display:block; }
+.contact-sub { font-size:0.9rem; color:#888; margin-top:2rem; line-height:1.7; max-width:360px; }
+.c-links { display:flex; flex-direction:column; gap:12px; }
+.c-link { display:flex; align-items:center; gap:1.2rem; text-decoration:none; padding:1.5rem 1.8rem; background:#fffdf9; border-radius:16px; border:2px solid #FFB3C6; box-shadow:0 2px 8px rgba(0,0,0,0.04); color:#2d2d2d; }
+.c-link.b { border-color:#A8D8F0; }
+.c-lbl { font-family:'DM Mono',monospace; font-size:0.6rem; color:#999; letter-spacing:0.1em; text-transform:uppercase; display:block; margin-bottom:0.3rem; }
+.c-val { font-size:0.88rem; font-weight:700; color:#2d2d2d; }
+
+footer { background:#2d2d2d; padding:1.8rem 4rem; display:flex; justify-content:space-between; align-items:center; }
+footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253,249,0.35); letter-spacing:0.1em; }
+
+@keyframes fadeUp { from{opacity:0;transform:translateY(28px);} to{opacity:1;transform:translateY(0);} }
+@keyframes marquee { from{transform:translateX(0);} to{transform:translateX(-50%);} }
+.reveal { opacity:1; transform:translateY(0); transition:opacity 0.7s ease,transform 0.7s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem;}
+  .sec{padding:5rem 1.5rem;}
+  #hero{padding:7rem 1.5rem 4rem;}
+  .about-grid,.contact-grid,.global-grid,.skills-grid,.lang-grid,.proj-grid{grid-template-columns:1fr;}
+  .cert-grid{grid-template-columns:1fr;}
+  .exp-hd{flex-direction:column;gap:0.5rem;}
+  .nav-links{display:none;}
+  #ai-note{padding:4rem 1.5rem;}
+  footer{padding:1.5rem;flex-direction:column;gap:0.5rem;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Seo yeon <span>Jung</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Work</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <span class="ai-badge">✦ Built with Claude AI</span>
+</nav>
+
+<section id="hero">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">✦ First things first — who am I, really?</div>
+    <h1 class="hero-name">Hi, I'm<br><span class="pink">Wawa. 🐾</span></h1>
+    <div class="fun-cards">
+      <div class="fun-card">🐰 Usahana obsessed</div>
+      <div class="fun-card y">🐕 Proud dog mom</div>
+      <div class="fun-card b">📚 Bookworm</div>
+      <div class="fun-card">🤖 WALL-E is my favorite movie</div>
+      <div class="fun-card y">🌏 Lived in 4 countries</div>
+      <div class="fun-card b">💄 Beauty & makeup lover</div>
+    </div>
+    <p class="hero-transition">Okay, now that you know me as a person...<br><strong>let me tell you what I do for work. 👇</strong></p>
+    <div class="hero-cta">
+      <a href="#about" class="btn-p">See My Work</a>
+      <a href="#contact" class="btn-o">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<div class="mq-wrap">
+  <div class="mq">
+    <span class="ac">✦</span><span>Global Marketing</span><span class="ac">✦</span><span>SEO / GEO</span><span class="ac">✦</span><span>B2B & B2C Campaigns</span><span class="ac">✦</span><span>LinkedIn Ads</span><span class="ac">✦</span><span>Content Strategy</span><span class="ac">✦</span><span>Gartner Relations</span><span class="ac">✦</span><span>Data Analytics</span><span class="ac">✦</span><span>English · Korean · Japanese</span>
+    <span class="ac">✦</span><span>Global Marketing</span><span class="ac">✦</span><span>SEO / GEO</span><span class="ac">✦</span><span>B2B & B2C Campaigns</span><span class="ac">✦</span><span>LinkedIn Ads</span><span class="ac">✦</span><span>Content Strategy</span><span class="ac">✦</span><span>Gartner Relations</span><span class="ac">✦</span><span>Data Analytics</span><span class="ac">✦</span><span>English · Korean · Japanese</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="sec" style="background:#faf8f5;">
+  <div class="sec-label">About</div>
+  <h2 class="sec-title reveal">The Marketer<br>Behind Wawa.</h2>
+  <div class="about-grid">
+    <div class="reveal">
+      <p class="about-p">I'm <strong>Seo yeon Jung</strong>, a global marketer based in Seoul with <strong>native-level English and Korean fluency</strong>, shaped by 12+ years living across the US, UAE, and Japan.</p>
+      <p class="about-p">I bridge the gap between <strong>data-driven performance marketing</strong> and <strong>globally resonant storytelling</strong> — running multi-channel campaigns, building brand authority through SEO/GEO content, and engaging enterprise stakeholders at the highest level.</p>
+    </div>
+    <div class="stats-grid reveal">
+      <div class="stat"><div class="stat-n">40%</div><div class="stat-l">YoY AI Search Growth</div></div>
+      <div class="stat y"><div class="stat-n">11</div><div class="stat-l">Global Award Wins</div></div>
+      <div class="stat b"><div class="stat-n">~3K</div><div class="stat-l">LinkedIn Followers</div></div>
+      <div class="stat p2"><div class="stat-n">3+</div><div class="stat-l">Years B2B Experience</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="sec" style="background:#fffdf9;">
+  <div class="sec-label">Experience</div>
+  <h2 class="sec-title reveal">Work.</h2>
+  <div class="exp reveal">
+    <div class="exp-hd">
+      <div><div class="exp-co">Penta Security</div><div class="exp-rl">Global Marketer</div></div>
+      <div style="text-align:right;"><span class="exp-pd">Jun 2025 — Present</span></div>
+    </div>
+    <p class="exp-desc">Leading global brand growth for a cybersecurity company. Independently manage LinkedIn advertising (KRW 4M/month), drive SEO/GEO content strategy, coordinate global award submissions, and facilitate enterprise-level analyst relations with Gartner.</p>
+    <div class="kpis">
+      <span class="kpi">40% YoY AI Traffic Growth</span>
+      <span class="kpi">11 Global Award Wins</span>
+      <span class="kpi">5 Gartner Meetings (6mo)</span>
+      <span class="kpi">~3K LinkedIn Followers</span>
+      <span class="kpi">605 Newsletter Subscribers</span>
+      <span class="kpi">14 PR Placements (10mo)</span>
+      <span class="kpi">KRW 4M/mo Ad Budget</span>
+      <span class="kpi">WordPress Website Management</span>
+    </div>
+  </div>
+  <div class="exp y reveal">
+    <div class="exp-hd">
+      <div><div class="exp-co">JamCoding</div><div class="exp-rl">Head of English Coding Education</div></div>
+      <div style="text-align:right;"><span class="exp-pd">Dec 2023 — May 2025</span></div>
+    </div>
+    <p class="exp-desc">Led client-facing education and business growth at an English-medium coding academy. Grew enrollment through SNS marketing and KakaoTalk-based community channels, managed stakeholder relationships, and coached students to award-winning results.</p>
+    <div class="kpis">
+      <span class="kpi">200% Enrollment Growth</span>
+      <span class="kpi">100% Cert Pass Rate</span>
+      <span class="kpi">KakaoTalk Channel Ops</span>
+      <span class="kpi">International School Outreach</span>
+    </div>
+  </div>
+  <div class="exp b reveal">
+    <div class="exp-hd">
+      <div><div class="exp-co">Metadexter</div><div class="exp-rl">Junior Developer & AI Researcher</div></div>
+      <div style="text-align:right;"><span class="exp-pd">Nov 2022 — Dec 2023</span></div>
+    </div>
+    <p class="exp-desc">Contributed to full-stack product development and AI research at an early-stage startup — Flutter, NestJS, ML/AI modules, SQL databases, through App Store deployment.</p>
+    <div class="kpis">
+      <span class="kpi">Full-stack Development</span>
+      <span class="kpi">App Store Deployment</span>
+      <span class="kpi">SQL & Data Analytics</span>
+      <span class="kpi">ML / AI Research</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="sec" style="background:#faf8f5;">
+  <div class="sec-label">Projects</div>
+  <h2 class="sec-title reveal">Selected<br>Work.</h2>
+
+  <!-- PROJECT 01 -->
+  <div class="proj-card reveal">
+    <div class="proj-top">
+      <div>
+        <div class="proj-num">01</div>
+        <div class="proj-ttl">LinkedIn Channel Revival</div>
+        <div class="proj-contrib">Contribution: 100%</div>
+      </div>
+      <div class="proj-tags">
+        <span class="ptag">Paid Social</span>
+        <span class="ptag">Content Strategy</span>
+        <span class="ptag ai">✦ AI-Powered</span>
+        <span class="ptag">Newsletter</span>
+      </div>
+    </div>
+    <div class="proj-grid">
+      <div>
+        <span class="proj-lbl">Background</span>
+        <p class="proj-txt">The company's LinkedIn page had been dormant for over a year — most followers were inactive, and posts were limited to occasional global event updates. The long absence of a dedicated global marketer had left the channel on autopilot.</p>
+        <span class="proj-lbl">Goal</span>
+        <p class="proj-txt">Reactivate a "dead" page. Rather than jumping to lead generation, the immediate goal was a visible, measurable win: growing the follower count.</p>
+        <span class="proj-lbl">Approach</span>
+        <p class="proj-txt">Targeted cybersecurity professionals in EMEA and the US with weekly curated industry news. Used <strong>Claude AI</strong> to select trending topics, summarize news, and refine copy at speed. Supplemented with company updates in newsletter format.</p>
+      </div>
+      <div>
+        <span class="proj-lbl">Lesson Learned</span>
+        <p class="proj-txt">Early ad setup was wrong — "follower objective" campaign drove CPA to KRW 30,000. Pivoted to content the audience actually wanted (weekly news), dropping CPA to KRW 2,000. Sometimes the best way to get what you want is to stop chasing it directly.</p>
+        <div class="result-box">
+          <span class="result-lbl">Result</span>
+          <div class="result-row">
+            <div class="result-item"><span class="result-num">~3K</span><span class="result-desc">Page Followers</span></div>
+            <div class="result-item"><span class="result-num">~700</span><span class="result-desc">Newsletter Subs in 2mo</span></div>
+            <div class="result-item"><span class="result-num">93%↓</span><span class="result-desc">CPA Reduction</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 02 -->
+  <div class="proj-card y reveal">
+    <div class="proj-top">
+      <div>
+        <div class="proj-num">02</div>
+        <div class="proj-ttl">Global Award Submissions</div>
+        <div class="proj-contrib">Contribution: 90%</div>
+      </div>
+      <div class="proj-tags">
+        <span class="ptag">PR</span>
+        <span class="ptag">Cross-functional</span>
+        <span class="ptag">Brand Building</span>
+      </div>
+    </div>
+    <div class="proj-grid">
+      <div>
+        <span class="proj-lbl">Background</span>
+        <p class="proj-txt">All award wins had stopped in the early 2020s. With no dedicated global marketer for years, the company's international recognition had gone completely quiet.</p>
+        <span class="proj-lbl">Goal</span>
+        <p class="proj-txt">Win 10+ categories across Globee Awards and Cybersecurity Excellence Awards — reestablishing the company's credibility on the global stage.</p>
+        <span class="proj-lbl">Approach</span>
+        <p class="proj-txt">Independently researched, prepared, and submitted entries across 11 award categories. Worked closely with product managers to gather technical depth and translate complex product specs into compelling narratives.</p>
+      </div>
+      <div>
+        <span class="proj-lbl">Lesson Learned</span>
+        <p class="proj-txt">Learned how to consult subject-matter experts effectively — asking the right questions, synthesizing technical information quickly, and collaborating across functions to deliver under deadline.</p>
+        <div class="result-box">
+          <span class="result-lbl">Result</span>
+          <div class="result-row">
+            <div class="result-item"><span class="result-num">11</span><span class="result-desc">Submissions</span></div>
+            <div class="result-item"><span class="result-num">11</span><span class="result-desc">Wins</span></div>
+            <div class="result-item"><span class="result-num">100%</span><span class="result-desc">Win Rate</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 03 -->
+  <div class="proj-card b reveal">
+    <div class="proj-top">
+      <div>
+        <div class="proj-num">03</div>
+        <div class="proj-ttl">Gartner Analyst Relations</div>
+        <div class="proj-contrib">Contribution: 95%</div>
+      </div>
+      <div class="proj-tags">
+        <span class="ptag">Analyst Relations</span>
+        <span class="ptag">Stakeholder Comms</span>
+        <span class="ptag">B2B</span>
+      </div>
+    </div>
+    <div class="proj-grid">
+      <div>
+        <span class="proj-lbl">Background</span>
+        <p class="proj-txt">Global recognition in cybersecurity requires more than marketing — it requires the endorsement of authoritative decision-makers like Gartner analysts, whose reports directly influence enterprise buying decisions worldwide.</p>
+        <span class="proj-lbl">Goal</span>
+        <p class="proj-txt">Establish a regular cadence of product briefings with Gartner analysts to build visibility toward inclusion in global cybersecurity reports.</p>
+        <span class="proj-lbl">Approach</span>
+        <p class="proj-txt">Prepared for each meeting by studying product specs with PMs and deepening knowledge of cybersecurity, cloud, and data concepts beyond typical marketing scope. Led with genuine curiosity and respect — building rapport rather than pitching.</p>
+      </div>
+      <div>
+        <span class="proj-lbl">Lesson Learned</span>
+        <p class="proj-txt">The goal was to get listed in a Gartner report. But the way to get there was to stop acting like it. Analysts respond to authenticity and expertise, not sales tactics. Learning to separate your objective from your behavior in the room was the real skill.</p>
+        <div class="result-box">
+          <span class="result-lbl">Result</span>
+          <div class="result-row">
+            <div class="result-item"><span class="result-num">5</span><span class="result-desc">Meetings in 6 months</span></div>
+            <div class="result-item"><span class="result-num">3</span><span class="result-desc">Types: Inquiry, Briefing, Feedback</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="sec" style="background:#fffdf9;">
+  <div class="sec-label">Skills</div>
+  <h2 class="sec-title reveal">What I Do.</h2>
+  <div class="skills-grid reveal">
+    <div class="sg">
+      <div class="sg-title">Growth & Content</div>
+      <div class="sk-list">
+        <span class="sk">SEO / GEO Strategy</span>
+        <span class="sk">B2B & B2C Campaign Management</span>
+        <span class="sk">Content Marketing</span>
+        <span class="sk">Newsletter Marketing</span>
+        <span class="sk">PR & Media Relations</span>
+        <span class="sk">Award & Event Management</span>
+        <span class="sk">WordPress Website Management</span>
+      </div>
+    </div>
+    <div class="sg y">
+      <div class="sg-title">Platforms & Ads</div>
+      <div class="sk-list">
+        <span class="sk">LinkedIn Ads</span>
+        <span class="sk">Google Search Ads</span>
+        <span class="sk">Meta Ads</span>
+        <span class="sk">TikTok Ads</span>
+        <span class="sk">Apple Ads</span>
+        <span class="sk">KakaoTalk</span>
+      </div>
+    </div>
+    <div class="sg b">
+      <div class="sg-title">Data & Tech</div>
+      <div class="sk-list">
+        <span class="sk">Google Analytics (GA4)</span>
+        <span class="sk">BigQuery</span>
+        <span class="sk">SQL / Python</span>
+        <span class="sk">Semrush</span>
+        <span class="sk">AI Tools (Claude, ChatGPT)</span>
+        <span class="sk">Full-stack (Flutter, NestJS)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTS -->
+<section id="certs" class="sec" style="background:#faf8f5;">
+  <div class="sec-label">Certifications</div>
+  <h2 class="sec-title reveal">Certified.</h2>
+  <div class="cert-grid reveal">
+    <div class="cert p"><div class="cert-ico">LI</div><div><div class="cert-name">LinkedIn Advertising Fundamentals Certification</div><div class="cert-issuer">LinkedIn Marketing Labs · 2026</div></div></div>
+    <div class="cert"><div class="cert-ico">G</div><div><div class="cert-name">Google Ads Search Certification</div><div class="cert-issuer">Google Digital Academy (Skillshop) · 2026</div></div></div>
+    <div class="cert p"><div class="cert-ico">G</div><div><div class="cert-name">Google Analytics Certification</div><div class="cert-issuer">Google Digital Academy (Skillshop) · 2026</div></div></div>
+  </div>
+</section>
+
+<!-- GLOBAL -->
+<section id="global" class="sec" style="background:#fffdf9;">
+  <div class="sec-label">Global Background</div>
+  <h2 class="sec-title reveal">12+ Years.<br>4 Countries.</h2>
+  <div class="global-grid reveal">
+    <div class="tl"><span class="tl-flag">🇺🇸</span><div class="tl-period">2008 — 2012</div><div class="tl-loc">North Carolina, USA</div><div class="tl-desc">Elementary school in English. The foundation of native-level fluency built young.</div></div>
+    <div class="tl y"><span class="tl-flag">🇦🇪</span><div class="tl-period">2014 — 2018</div><div class="tl-loc">Abu Dhabi, UAE</div><div class="tl-desc">Middle and high school entirely in English. Multicultural instincts developed in one of the world's most diverse cities.</div></div>
+    <div class="tl p"><span class="tl-flag">🇯🇵</span><div class="tl-period">2018 — 2022</div><div class="tl-loc">Tokyo, Japan</div><div class="tl-desc">B.A. at Keio University under Prof. Jun Murai. Developed professional Japanese through academics and work.</div></div>
+    <div class="tl p2"><span class="tl-flag">🇰🇷</span><div class="tl-period">2022 — Present</div><div class="tl-loc">Seoul, Korea</div><div class="tl-desc">Building a global marketing career at the intersection of tech, data, and cross-cultural communication.</div></div>
+  </div>
+</section>
+
+<!-- LANGUAGES -->
+<section id="languages" class="sec" style="background:#faf8f5;">
+  <div class="sec-label">Languages</div>
+  <h2 class="sec-title reveal">Multilingual.</h2>
+  <div class="lang-grid reveal">
+    <div class="lang"><span class="lang-flag">🇺🇸</span><div class="lang-name">English</div><div class="lang-lvl">Native-level · 12+ Years</div></div>
+    <div class="lang p"><span class="lang-flag">🇰🇷</span><div class="lang-name">Korean</div><div class="lang-lvl">Native</div></div>
+    <div class="lang y"><span class="lang-flag">🇯🇵</span><div class="lang-name">Japanese</div><div class="lang-lvl">Professional Working</div></div>
+  </div>
+</section>
+
+<!-- AI NOTE -->
+<div id="ai-note">
+  <div class="ab ab1"></div><div class="ab ab2"></div><div class="ab ab3"></div>
+  <div class="ai-lbl">✦ AI-Powered Portfolio</div>
+  <h2 class="ai-title">Built With<br><span>Claude AI.</span></h2>
+  <p class="ai-txt">This portfolio was built in collaboration with Claude (Anthropic). It reflects my belief that great marketers in 2026 don't just use AI as a tool, but as a creative partner to move faster and think bigger.</p>
+  <div class="ai-tags">
+    <span class="ai-tag">Claude (Anthropic)</span>
+    <span class="ai-tag">Resume Writing</span>
+    <span class="ai-tag">Content Strategy</span>
+    <span class="ai-tag">Portfolio Design</span>
+    <span class="ai-tag">LinkedIn Optimization</span>
+    <span class="ai-tag">Cover Letter Generation</span>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="sec" style="background:#faf8f5;">
+  <div class="sec-label">Contact</div>
+  <div class="contact-grid">
+    <div class="reveal">
+      <h2 class="contact-big">Let's<br><span class="cp">Talk.</span></h2>
+      <p class="contact-sub">Open to global marketing, account management, and social marketing roles at global tech companies operating in Korea.</p>
+    </div>
+    <div class="c-links reveal">
+      <a class="c-link"><div><span class="c-lbl">Email</span><span class="c-val"><span class="__cf_email__" data-cfemail="fc9b99988b8bccccbc9b919d9590d29f9391">gedww00@gmail.com</span></span></div></a>
+      <a href="https://linkedin.com/in/seo-yeon-jung-544682373" target="_blank" class="c-link b"><div><span class="c-lbl">LinkedIn</span><span class="c-val">linkedin.com/in/seo-yeon-jung</span></div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Seo yeon Jung (Wawa) · Seoul, Korea</p>
+  <p>Built with Claude AI 🐰</p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const obs 
