@@ -9,7 +9,7 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { background:#fffdf9; color:#2d2d2d; font-family:'Nunito',sans-serif; overflow-x:hidden; }
- 
+
 nav {
   position:fixed; top:0; left:0; right:0; z-index:100;
   display:flex; justify-content:space-between; align-items:center;
@@ -24,7 +24,7 @@ nav {
 .nav-links a { color:#999; text-decoration:none; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:700; transition:color 0.2s; }
 .nav-links a:hover { color:#FF8FAB; }
 .ai-badge { font-family:'DM Mono',monospace; font-size:0.62rem; color:#5BBFEA; border:1.5px solid #5BBFEA; padding:0.3rem 0.8rem; border-radius:20px; background:rgba(91,191,234,0.1); }
- 
+
 /* HERO */
 #hero { min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:8rem 4rem 6rem; position:relative; overflow:hidden; }
 .blob { position:absolute; border-radius:50%; filter:blur(70px); opacity:0.3; z-index:0; }
@@ -44,19 +44,19 @@ nav {
 .hero-cta { display:flex; gap:1rem; margin-top:2.5rem; opacity:0; animation:fadeUp 0.7s ease 0.9s forwards; }
 .btn-p { background:#FF8FAB; color:white; padding:0.85rem 2rem; font-family:'Nunito',sans-serif; font-weight:800; font-size:0.82rem; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none; border-radius:10px; box-shadow:4px 4px 0 #FFB3C6; display:inline-block; }
 .btn-o { color:#2d2d2d; border:2px solid #2d2d2d; padding:0.85rem 2rem; font-size:0.82rem; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none; border-radius:10px; font-weight:800; box-shadow:4px 4px 0 rgba(0,0,0,0.1); display:inline-block; }
- 
+
 /* MARQUEE */
 .mq-wrap { overflow:hidden; padding:0.9rem 0; background:#FFE034; border-top:2px solid #F5C800; border-bottom:2px solid #F5C800; }
 .mq { display:flex; gap:2.5rem; animation:marquee 22s linear infinite; white-space:nowrap; }
 .mq span { font-family:'Bebas Neue',sans-serif; font-size:1rem; letter-spacing:0.1em; color:#2d2d2d; flex-shrink:0; opacity:0.65; }
 .mq span.ac { color:#FF8FAB; opacity:1; }
- 
+
 /* SECTION BASE */
 .sec { padding:7rem 4rem; }
 .sec-label { font-family:'DM Mono',monospace; font-size:0.68rem; color:#FF8FAB; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:0.8rem; display:flex; align-items:center; gap:0.8rem; }
 .sec-label::before { content:''; display:block; width:28px; height:2px; background:#FF8FAB; border-radius:2px; }
 .sec-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,5.5vw,72px); line-height:0.95; letter-spacing:-0.01em; margin-bottom:3.5rem; color:#2d2d2d; }
- 
+
 /* ABOUT */
 .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
 .about-p { color:#555; font-size:1.1rem; line-height:1.85; margin-bottom:1.4rem; font-weight:400; }
@@ -71,7 +71,7 @@ nav {
 .stat.b .stat-n { color:#5BBFEA; }
 .stat.p2 .stat-n { color:#FF8FAB; }
 .stat-l { font-size:0.7rem; color:#999; text-transform:uppercase; letter-spacing:0.08em; margin-top:0.5rem; font-weight:700; }
- 
+
 /* EXPERIENCE */
 .exp { background:#fffdf9; border-radius:20px; padding:2.5rem; margin-bottom:14px; border:2px solid #FFB3C6; box-shadow:0 2px 12px rgba(0,0,0,0.04); }
 .exp.y { border-color:#F5C800; }
@@ -87,7 +87,7 @@ nav {
 .kpi { font-family:'DM Mono',monospace; font-size:0.67rem; padding:0.33rem 0.8rem; border-radius:20px; background:rgba(255,143,171,0.12); color:#FF8FAB; border:1px solid rgba(255,143,171,0.3); }
 .exp.y .kpi { background:rgba(179,143,0,0.1); color:#b38f00; border-color:rgba(179,143,0,0.3); }
 .exp.b .kpi { background:rgba(91,191,234,0.12); color:#5BBFEA; border-color:rgba(91,191,234,0.3); }
- 
+
 /* PROJECTS */
 .proj-card { background:#fffdf9; border-radius:24px; padding:2.5rem; margin-bottom:16px; border:2px solid #FFB3C6; }
 .proj-card.y { border-color:#F5C800; }
@@ -118,7 +118,7 @@ nav {
 .proj-card.y .result-num { color:#b38f00; }
 .proj-card.b .result-num { color:#5BBFEA; }
 .result-desc { font-size:0.68rem; color:#999; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-top:0.2rem; }
- 
+
 /* SKILLS */
 .skills-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
 .sg { background:#fffdf9; padding:2.2rem; border-radius:20px; border:2px solid #FFB3C6; }
@@ -132,7 +132,7 @@ nav {
 .sk::before { content:'✦'; font-size:0.6rem; color:#FF8FAB; }
 .sg.y .sk::before { color:#b38f00; }
 .sg.b .sk::before { color:#5BBFEA; }
- 
+
 /* CERTS */
 .cert-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
 .cert { background:#fffdf9; padding:1.7rem 2rem; border-radius:16px; display:flex; align-items:center; gap:1.2rem; border:2px solid #A8D8F0; box-shadow:0 2px 8px rgba(0,0,0,0.04); }
@@ -141,7 +141,7 @@ nav {
 .cert.p .cert-ico { background:rgba(255,179,198,0.3); color:#FF8FAB; }
 .cert-name { font-size:0.97rem; font-weight:700; color:#2d2d2d; margin-bottom:0.2rem; }
 .cert-issuer { font-family:'DM Mono',monospace; font-size:0.6rem; color:#999; letter-spacing:0.08em; text-transform:uppercase; }
- 
+
 /* GLOBAL */
 .global-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
 .tl { background:#fffdf9; border-radius:16px; padding:2rem 2.2rem; border:2px solid #A8D8F0; }
@@ -152,7 +152,7 @@ nav {
 .tl-period { font-family:'DM Mono',monospace; font-size:0.65rem; color:#999; letter-spacing:0.1em; margin-bottom:0.4rem; }
 .tl-loc { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.05em; color:#2d2d2d; margin-bottom:0.5rem; }
 .tl-desc { font-size:0.94rem; color:#666; line-height:1.65; }
- 
+
 /* LANGUAGES */
 .lang-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
 .lang { background:#fffdf9; padding:2.5rem 2rem; border-radius:20px; text-align:center; border:2px solid #A8D8F0; }
@@ -161,7 +161,7 @@ nav {
 .lang-flag { font-size:2.4rem; margin-bottom:1rem; display:block; }
 .lang-name { font-family:'Bebas Neue',sans-serif; font-size:2.2rem; letter-spacing:0.06em; color:#2d2d2d; margin-bottom:0.5rem; }
 .lang-lvl { font-family:'DM Mono',monospace; font-size:0.6rem; color:#999; letter-spacing:0.12em; text-transform:uppercase; font-weight:500; }
- 
+
 /* AI */
 #ai-note { background:#2d2d2d; padding:5rem 4rem; text-align:center; position:relative; overflow:hidden; }
 .ab { position:absolute; border-radius:50%; filter:blur(80px); opacity:0.12; }
@@ -174,7 +174,7 @@ nav {
 .ai-txt { font-size:1rem; color:rgba(255,253,249,0.6); max-width:580px; margin:0 auto 2rem; line-height:1.8; position:relative; z-index:1; }
 .ai-tags { display:flex; justify-content:center; flex-wrap:wrap; gap:0.7rem; position:relative; z-index:1; }
 .ai-tag { background:rgba(255,255,255,0.07); color:rgba(255,253,249,0.75); font-family:'DM Mono',monospace; font-size:0.67rem; padding:0.4rem 1rem; border-radius:20px; border:1px solid rgba(255,255,255,0.1); }
- 
+
 /* CONTACT */
 .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
 .contact-big { font-family:'Bebas Neue',sans-serif; font-size:clamp(48px,7vw,90px); line-height:0.9; letter-spacing:-0.01em; color:#2d2d2d; }
@@ -185,15 +185,15 @@ nav {
 .c-link.b { border-color:#A8D8F0; }
 .c-lbl { font-family:'DM Mono',monospace; font-size:0.6rem; color:#999; letter-spacing:0.1em; text-transform:uppercase; display:block; margin-bottom:0.3rem; }
 .c-val { font-size:0.88rem; font-weight:700; color:#2d2d2d; }
- 
+
 footer { background:#2d2d2d; padding:1.8rem 4rem; display:flex; justify-content:space-between; align-items:center; }
 footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253,249,0.35); letter-spacing:0.1em; }
- 
+
 @keyframes fadeUp { from{opacity:0;transform:translateY(28px);} to{opacity:1;transform:translateY(0);} }
 @keyframes marquee { from{transform:translateX(0);} to{transform:translateX(-50%);} }
 .reveal { opacity:1; transform:translateY(0); transition:opacity 0.7s ease,transform 0.7s ease; }
 .reveal.visible { opacity:1; transform:translateY(0); }
- 
+
 @media(max-width:900px){
   nav{padding:1rem 1.5rem;}
   .sec{padding:5rem 1.5rem;}
@@ -208,7 +208,7 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
 </style>
 </head>
 <body>
- 
+
 <nav>
   <a href="#" class="nav-logo">Seo yeon <span>Jung</span></a>
   <ul class="nav-links">
@@ -220,7 +220,7 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
   </ul>
   <span class="ai-badge">✦ Built with AI Tools</span>
 </nav>
- 
+
 <section id="hero">
   <div class="blob b1"></div>
   <div class="blob b2"></div>
@@ -252,203 +252,6 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
     </div>
   </div>
 </div>
- 
-<div class="mq-wrap">
-  <div class="mq">
-    <span class="ac">✦</span><span>Global Marketing</span><span class="ac">✦</span><span>SEO / GEO</span><span class="ac">✦</span><span>B2B & B2C Campaigns</span><span class="ac">✦</span><span>LinkedIn Ads</span><span class="ac">✦</span><span>Content Strategy</span><span class="ac">✦</span><span>Gartner Relations</span><span class="ac">✦</span><span>Data Analytics</span><span class="ac">✦</span><span>English · Korean · Japanese</span>
-    <span class="ac">✦</span><span>Global Marketing</span><span class="ac">✦</span><span>SEO / GEO</span><span class="ac">✦</span><span>B2B & B2C Campaigns</span><span class="ac">✦</span><span>LinkedIn Ads</span><span class="ac">✦</span><span>Content Strategy</span><span class="ac">✦</span><span>Gartner Relations</span><span class="ac">✦</span><span>Data Analytics</span><span class="ac">✦</span><span>English · Korean · Japanese</span>
-  </div>
-</div>
-
-/* ABOUT */
-.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
-.about-p { color:#555; font-size:1.1rem; line-height:1.85; margin-bottom:1.4rem; font-weight:400; }
-.about-p strong { color:#2d2d2d; font-weight:800; }
-.stats-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-.stat { background:#fffdf9; padding:1.8rem; border-radius:16px; border:2px solid #FFB3C6; box-shadow:0 2px 12px rgba(0,0,0,0.05); }
-.stat.y { border-color:#F5C800; }
-.stat.b { border-color:#5BBFEA; }
-.stat.p2 { border-color:#FF8FAB; }
-.stat-n { font-family:'Bebas Neue',sans-serif; font-size:3rem; line-height:1; color:#FF8FAB; }
-.stat.y .stat-n { color:#b38f00; }
-.stat.b .stat-n { color:#5BBFEA; }
-.stat.p2 .stat-n { color:#FF8FAB; }
-.stat-l { font-size:0.7rem; color:#999; text-transform:uppercase; letter-spacing:0.08em; margin-top:0.5rem; font-weight:700; }
-
-/* EXPERIENCE */
-.exp { background:#fffdf9; border-radius:20px; padding:2.5rem; margin-bottom:14px; border:2px solid #FFB3C6; box-shadow:0 2px 12px rgba(0,0,0,0.04); }
-.exp.y { border-color:#F5C800; }
-.exp.b { border-color:#5BBFEA; }
-.exp-hd { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.2rem; }
-.exp-co { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.05em; color:#2d2d2d; }
-.exp-pd { font-family:'DM Mono',monospace; font-size:0.65rem; color:#999; letter-spacing:0.08em; display:block; margin-bottom:0.3rem; }
-.exp-rl { font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#FF8FAB; }
-.exp.y .exp-rl { color:#b38f00; }
-.exp.b .exp-rl { color:#5BBFEA; }
-.exp-desc { color:#555; font-size:1rem; line-height:1.8; margin-bottom:1.4rem; }
-.kpis { display:flex; flex-wrap:wrap; gap:0.5rem; }
-.kpi { font-family:'DM Mono',monospace; font-size:0.67rem; padding:0.33rem 0.8rem; border-radius:20px; background:rgba(255,143,171,0.12); color:#FF8FAB; border:1px solid rgba(255,143,171,0.3); }
-.exp.y .kpi { background:rgba(179,143,0,0.1); color:#b38f00; border-color:rgba(179,143,0,0.3); }
-.exp.b .kpi { background:rgba(91,191,234,0.12); color:#5BBFEA; border-color:rgba(91,191,234,0.3); }
-
-/* PROJECTS */
-.proj-card { background:#fffdf9; border-radius:24px; padding:2.5rem; margin-bottom:16px; border:2px solid #FFB3C6; }
-.proj-card.y { border-color:#F5C800; }
-.proj-card.b { border-color:#5BBFEA; }
-.proj-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:2rem; flex-wrap:wrap; gap:1rem; }
-.proj-num { font-family:'Bebas Neue',sans-serif; font-size:3.5rem; line-height:1; color:#2d2d2d; opacity:0.12; }
-.proj-ttl { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.05em; color:#2d2d2d; margin-top:0.3rem; }
-.proj-contrib { font-family:'DM Mono',monospace; font-size:0.65rem; color:#999; letter-spacing:0.1em; margin-top:0.4rem; }
-.proj-tags { display:flex; flex-wrap:wrap; gap:0.5rem; align-items:flex-start; }
-.ptag { font-family:'DM Mono',monospace; font-size:0.65rem; padding:0.35rem 0.9rem; border-radius:20px; background:#faf8f5; color:#2d2d2d; border:1.5px solid rgba(0,0,0,0.12); font-weight:500; }
-.ptag.ai { background:rgba(255,143,171,0.15); color:#FF8FAB; border-color:#FF8FAB; }
-.proj-grid { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; }
-.proj-lbl { font-family:'DM Mono',monospace; font-size:0.65rem; color:#FF8FAB; letter-spacing:0.15em; text-transform:uppercase; display:block; margin-bottom:0.5rem; margin-top:1.4rem; }
-.proj-card.y .proj-lbl { color:#b38f00; }
-.proj-card.b .proj-lbl { color:#5BBFEA; }
-.proj-lbl:first-child { margin-top:0; }
-.proj-txt { font-size:0.88rem; color:#444; line-height:1.8; }
-.proj-txt strong { color:#2d2d2d; font-weight:800; }
-.result-box { background:#faf8f5; border-radius:16px; padding:1.5rem; margin-top:1.4rem; border:2px solid #FFB3C6; }
-.proj-card.y .result-box { border-color:#F5C800; }
-.proj-card.b .result-box { border-color:#5BBFEA; }
-.result-lbl { font-family:'DM Mono',monospace; font-size:0.65rem; color:#FF8FAB; letter-spacing:0.15em; text-transform:uppercase; display:block; margin-bottom:1rem; }
-.proj-card.y .result-lbl { color:#b38f00; }
-.proj-card.b .result-lbl { color:#5BBFEA; }
-.result-row { display:flex; gap:1.5rem; flex-wrap:wrap; }
-.result-item {}
-.result-num { font-family:'Bebas Neue',sans-serif; font-size:2.2rem; line-height:1; display:block; color:#FF8FAB; }
-.proj-card.y .result-num { color:#b38f00; }
-.proj-card.b .result-num { color:#5BBFEA; }
-.result-desc { font-size:0.68rem; color:#999; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-top:0.2rem; }
-
-/* SKILLS */
-.skills-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-.sg { background:#fffdf9; padding:2.2rem; border-radius:20px; border:2px solid #FFB3C6; }
-.sg.y { border-color:#F5C800; }
-.sg.b { border-color:#A8D8F0; }
-.sg-title { font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:0.08em; color:#FF8FAB; margin-bottom:1.4rem; }
-.sg.y .sg-title { color:#b38f00; }
-.sg.b .sg-title { color:#5BBFEA; }
-.sk-list { display:flex; flex-direction:column; gap:0.6rem; }
-.sk { font-size:0.95rem; color:#555; display:flex; align-items:center; gap:0.5rem; font-weight:600; }
-.sk::before { content:'✦'; font-size:0.6rem; color:#FF8FAB; }
-.sg.y .sk::before { color:#b38f00; }
-.sg.b .sk::before { color:#5BBFEA; }
-
-/* CERTS */
-.cert-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
-.cert { background:#fffdf9; padding:1.7rem 2rem; border-radius:16px; display:flex; align-items:center; gap:1.2rem; border:2px solid #A8D8F0; box-shadow:0 2px 8px rgba(0,0,0,0.04); }
-.cert.p { border-color:#FFB3C6; }
-.cert-ico { width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:1.1rem; flex-shrink:0; background:rgba(168,216,240,0.3); color:#5BBFEA; }
-.cert.p .cert-ico { background:rgba(255,179,198,0.3); color:#FF8FAB; }
-.cert-name { font-size:0.97rem; font-weight:700; color:#2d2d2d; margin-bottom:0.2rem; }
-.cert-issuer { font-family:'DM Mono',monospace; font-size:0.6rem; color:#999; letter-spacing:0.08em; text-transform:uppercase; }
-
-/* GLOBAL */
-.global-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
-.tl { background:#fffdf9; border-radius:16px; padding:2rem 2.2rem; border:2px solid #A8D8F0; }
-.tl.y { border-color:#FFE034; }
-.tl.p { border-color:#FFB3C6; }
-.tl.p2 { border-color:#FF8FAB; }
-.tl-flag { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.08em; color:#2d2d2d; margin-bottom:0.5rem; display:block; }
-.tl-period { font-family:'DM Mono',monospace; font-size:0.65rem; color:#999; letter-spacing:0.1em; margin-bottom:0.4rem; }
-.tl-loc { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.05em; color:#2d2d2d; margin-bottom:0.5rem; }
-.tl-desc { font-size:0.94rem; color:#666; line-height:1.65; }
-
-/* LANGUAGES */
-.lang-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-.lang { background:#fffdf9; padding:2.5rem 2rem; border-radius:20px; text-align:center; border:2px solid #A8D8F0; }
-.lang.p { border-color:#FFB3C6; }
-.lang.y { border-color:#F5C800; }
-.lang-flag { font-size:2.4rem; margin-bottom:1rem; display:block; }
-.lang-name { font-family:'Bebas Neue',sans-serif; font-size:2.2rem; letter-spacing:0.06em; color:#2d2d2d; margin-bottom:0.5rem; }
-.lang-lvl { font-family:'DM Mono',monospace; font-size:0.6rem; color:#999; letter-spacing:0.12em; text-transform:uppercase; font-weight:500; }
-
-/* AI */
-#ai-note { background:#2d2d2d; padding:5rem 4rem; text-align:center; position:relative; overflow:hidden; }
-.ab { position:absolute; border-radius:50%; filter:blur(80px); opacity:0.12; }
-.ab1{width:350px;height:350px;background:#FFB3C6;top:-80px;left:-80px;}
-.ab2{width:300px;height:300px;background:#FFE034;bottom:-80px;right:-80px;}
-.ab3{width:250px;height:250px;background:#A8D8F0;top:50%;right:10%;}
-.ai-lbl { font-family:'DM Mono',monospace; font-size:0.68rem; color:#FFE034; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1rem; position:relative; z-index:1; }
-.ai-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,6vw,80px); color:#fffdf9; line-height:0.95; margin-bottom:1.5rem; letter-spacing:-0.01em; position:relative; z-index:1; }
-.ai-title span { color:#FFE034; }
-.ai-txt { font-size:1rem; color:rgba(255,253,249,0.6); max-width:580px; margin:0 auto 2rem; line-height:1.8; position:relative; z-index:1; }
-.ai-tags { display:flex; justify-content:center; flex-wrap:wrap; gap:0.7rem; position:relative; z-index:1; }
-.ai-tag { background:rgba(255,255,255,0.07); color:rgba(255,253,249,0.75); font-family:'DM Mono',monospace; font-size:0.67rem; padding:0.4rem 1rem; border-radius:20px; border:1px solid rgba(255,255,255,0.1); }
-
-/* CONTACT */
-.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
-.contact-big { font-family:'Bebas Neue',sans-serif; font-size:clamp(48px,7vw,90px); line-height:0.9; letter-spacing:-0.01em; color:#2d2d2d; }
-.contact-big .cp { color:#FF8FAB; display:block; }
-.contact-sub { font-size:1rem; color:#888; margin-top:2rem; line-height:1.7; max-width:360px; }
-.c-links { display:flex; flex-direction:column; gap:12px; }
-.c-link { display:flex; align-items:center; gap:1.2rem; text-decoration:none; padding:1.5rem 1.8rem; background:#fffdf9; border-radius:16px; border:2px solid #FFB3C6; box-shadow:0 2px 8px rgba(0,0,0,0.04); color:#2d2d2d; }
-.c-link.b { border-color:#A8D8F0; }
-.c-lbl { font-family:'DM Mono',monospace; font-size:0.6rem; color:#999; letter-spacing:0.1em; text-transform:uppercase; display:block; margin-bottom:0.3rem; }
-.c-val { font-size:0.88rem; font-weight:700; color:#2d2d2d; }
-
-footer { background:#2d2d2d; padding:1.8rem 4rem; display:flex; justify-content:space-between; align-items:center; }
-footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253,249,0.35); letter-spacing:0.1em; }
-
-@keyframes fadeUp { from{opacity:0;transform:translateY(28px);} to{opacity:1;transform:translateY(0);} }
-@keyframes marquee { from{transform:translateX(0);} to{transform:translateX(-50%);} }
-.reveal { opacity:1; transform:translateY(0); transition:opacity 0.7s ease,transform 0.7s ease; }
-.reveal.visible { opacity:1; transform:translateY(0); }
-
-@media(max-width:900px){
-  nav{padding:1rem 1.5rem;}
-  .sec{padding:5rem 1.5rem;}
-  #hero{padding:7rem 1.5rem 4rem;}
-  .about-grid,.contact-grid,.global-grid,.skills-grid,.lang-grid,.proj-grid{grid-template-columns:1fr;}
-  .cert-grid{grid-template-columns:1fr;}
-  .exp-hd{flex-direction:column;gap:0.5rem;}
-  .nav-links{display:none;}
-  #ai-note{padding:4rem 1.5rem;}
-  footer{padding:1.5rem;flex-direction:column;gap:0.5rem;text-align:center;}
-}
-</style>
-</head>
-<body>
-
-<nav>
-  <a href="#" class="nav-logo">Seo yeon <span>Jung</span></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Work</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <span class="ai-badge">✦ Built with AI Tools</span>
-</nav>
-
-<section id="hero">
-  <div class="blob b1"></div>
-  <div class="blob b2"></div>
-  <div class="blob b3"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">✦ First things first — who am I, really?</div>
-    <h1 class="hero-name">Hi, I'm<br><span class="pink">Wawa. 🐾</span></h1>
-    <div class="fun-cards">
-      <div class="fun-card">🐰 Usahana obsessed</div>
-      <div class="fun-card y">🐕 Proud dog mom</div>
-      <div class="fun-card b">🤖 AI user</div>
-      <div class="fun-card">🌏 International background</div>
-      <div class="fun-card y">💄 Beauty & makeup lover</div>
-      <div class="fun-card b">💻 Always online</div>
-      <div class="fun-card">👗Learning fasion</div>
-      <div class="fun-card y">🎤 K-POP listener</div>
-      <div class="fun-card b">🖼️ Into 2D</div>
-    </div>
-    <p class="hero-transition">Okay, now that you know me as a person...<br><strong>let me tell you what I do for work. 👇</strong></p>
-    <div class="hero-cta">
-      <a href="#about" class="btn-p">See My Work</a>
-      <a href="#contact" class="btn-o">Get in Touch</a>
-    </div>
-  </div>
-</section>
 
 <div class="mq-wrap">
   <div class="mq">
@@ -540,7 +343,7 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
       <div class="proj-tags">
         <span class="ptag">Paid Social</span>
         <span class="ptag">Content Strategy</span>
-        <span class="ptag ai">✦ AI-Powered</span>
+        <span class="ptag ai">✦ LLM Tools</span>
         <span class="ptag">Newsletter</span>
       </div>
     </div>
@@ -551,7 +354,7 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
         <span class="proj-lbl">Goal</span>
         <p class="proj-txt">Reactivate a "dead" page. Rather than jumping to lead generation, the immediate goal was a visible, measurable win: growing the follower count.</p>
         <span class="proj-lbl">Approach</span>
-        <p class="proj-txt">Targeted cybersecurity professionals in EMEA and the US with weekly curated industry news. Used <strong>Claude AI</strong> to select trending topics, summarize news, and refine copy at speed. Supplemented with company updates in newsletter format.</p>
+        <p class="proj-txt">Targeted cybersecurity professionals in EMEA and the US with weekly curated industry news. Used <strong>LLM Tools</strong> to select trending topics, summarize news, and refine copy at speed. Supplemented with company updates in newsletter format.</p>
       </div>
       <div>
         <span class="proj-lbl">Lesson Learned</span>
@@ -562,6 +365,41 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
             <div class="result-item"><span class="result-num">~3K</span><span class="result-desc">Page Followers</span></div>
             <div class="result-item"><span class="result-num">~700</span><span class="result-desc">Newsletter Subs in 2mo</span></div>
             <div class="result-item"><span class="result-num">93%↓</span><span class="result-desc">CPA Reduction</span></div>
+          </div>
+        </div>
+        
+        <div style="margin-top:1rem; padding:1.2rem; border-radius:14px; border:2px solid #FFB3C6; background:#fffdf9;">
+          <p style="font-family:'DM Mono',monospace; font-size:0.6rem; color:#FF8FAB; letter-spacing:0.12em; text-transform:uppercase; margin:0 0 0.8rem 0;">Follower Growth</p>
+          <div style="display:flex; align-items:flex-end; gap:8px; height:80px; margin-bottom:0.8rem;">
+            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px;">
+              <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#FF8FAB; margin:0;">1K</p>
+              <div style="width:100%; height:22px; background:#FFB3C6; border-radius:3px 3px 0 0;"></div>
+              <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">Start</p>
+            </div>
+            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px;">
+              <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#FF8FAB; margin:0;">1.5K</p>
+              <div style="width:100%; height:38px; background:#FF9BB8; border-radius:3px 3px 0 0;"></div>
+              <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">3mo</p>
+            </div>
+            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px;">
+              <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#FF8FAB; margin:0;">2K</p>
+              <div style="width:100%; height:54px; background:#FF8FAB; border-radius:3px 3px 0 0;"></div>
+              <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">6mo</p>
+            </div>
+            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px;">
+              <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#FF5C7A; margin:0;">~3K</p>
+              <div style="width:100%; height:76px; background:#FF5C7A; border-radius:3px 3px 0 0;"></div>
+              <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">Now</p>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; padding-top:0.6rem; border-top:1px solid #FFB3C6;">
+            <div><p style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:#FFB3C6; margin:0;">CPA ₩30K</p><p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">Before pivot</p></div>
+            <div style="text-align:right;"><p style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:#FF5C7A; margin:0;">CPA ₩2K</p><p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">After pivot (93%↓)</p></div>
+          </div>
+        </div>
+          <div style="display:flex; justify-content:space-between; padding-top:0.6rem; border-top:1px solid #FFB3C6;">
+            <div><p style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:#FFB3C6; margin:0;">CPA ₩30K</p><p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">Before pivot</p></div>
+            <div style="text-align:right;"><p style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:#FF5C7A; margin:0;">CPA ₩2K</p><p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">After pivot (93%↓)</p></div>
           </div>
         </div>
       </div>
@@ -602,6 +440,28 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
             <div class="result-item"><span class="result-num">100%</span><span class="result-desc">Win Rate</span></div>
           </div>
         </div>
+        
+        <div style="margin-top:1rem; padding:1.2rem; border-radius:14px; border:2px solid #F5C800; background:#fffdf9;">
+          <p style="font-family:'DM Mono',monospace; font-size:0.6rem; color:#b38f00; letter-spacing:0.12em; text-transform:uppercase; margin:0 0 0.8rem 0;">Award Wins: Before vs After</p>
+          <div style="display:flex; align-items:flex-end; gap:1.5rem;">
+            <div style="display:flex; align-items:flex-end; gap:8px; flex-shrink:0;">
+              <div style="display:flex; flex-direction:column; align-items:center; gap:3px;">
+                <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">1</p>
+                <div style="width:36px; height:7px; background:#e8d870; border-radius:3px 3px 0 0;"></div>
+                <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">Before/yr</p>
+              </div>
+              <div style="display:flex; flex-direction:column; align-items:center; gap:3px;">
+                <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#b38f00; margin:0;">11</p>
+                <div style="width:36px; height:76px; background:#F5C800; border-radius:3px 3px 0 0;"></div>
+                <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">1Q After</p>
+              </div>
+            </div>
+            <p style="font-family:'Nunito',sans-serif; font-size:0.82rem; color:#555; line-height:1.6; margin:0;"><span style="font-weight:800; color:#b38f00;">11x</span> more wins in a single quarter than the entire year before joining.</p>
+          </div>
+        </div>
+            <p style="flex:1.5; font-family:'Nunito',sans-serif; font-size:0.82rem; color:#555; line-height:1.6; margin:0;"><span style="font-weight:800; color:#b38f00;">11x</span> more wins in a single quarter than the entire year before joining.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -635,13 +495,36 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
         <div class="result-box">
           <span class="result-lbl">Result</span>
           <div class="result-row">
-            <div class="result-item"><span class="result-num">5</span><span class="result-desc">Meetings in 6 months</span></div>
-            <div class="result-item"><span class="result-num">3</span><span class="result-desc">Types: Inquiry, Briefing, Feedback</span></div>
+            <div class="result-item"><span class="result-num">10</span><span class="result-desc">Meetings Conducted</span></div>
+            <div class="result-item"><span class="result-num">3x</span><span class="result-desc">Avg Meetings/Quarter</span></div>
+          </div>
+        </div>
+        
+        <div style="margin-top:1rem; padding:1.2rem; border-radius:14px; border:2px solid #5BBFEA; background:#fffdf9;">
+          <p style="font-family:'DM Mono',monospace; font-size:0.6rem; color:#5BBFEA; letter-spacing:0.12em; text-transform:uppercase; margin:0 0 0.8rem 0;">Avg Meetings / Quarter</p>
+          <div style="display:flex; align-items:flex-end; gap:1.5rem;">
+            <div style="display:flex; align-items:flex-end; gap:8px; flex-shrink:0;">
+              <div style="display:flex; flex-direction:column; align-items:center; gap:3px;">
+                <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">2</p>
+                <div style="width:36px; height:26px; background:#A8D8F0; border-radius:3px 3px 0 0;"></div>
+                <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">Before</p>
+              </div>
+              <div style="display:flex; flex-direction:column; align-items:center; gap:3px;">
+                <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#5BBFEA; margin:0;">6</p>
+                <div style="width:36px; height:76px; background:#5BBFEA; border-radius:3px 3px 0 0;"></div>
+                <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">After</p>
+              </div>
+            </div>
+            <p style="font-family:'Nunito',sans-serif; font-size:0.82rem; color:#555; line-height:1.6; margin:0;"><span style="font-weight:800; color:#5BBFEA;">3x</span> increase in quarterly analyst engagement — 10 meetings total conducted.</p>
+          </div>
+        </div>
+            <p style="flex:1.5; font-family:'Nunito',sans-serif; font-size:0.82rem; color:#555; line-height:1.6; margin:0;"><span style="font-weight:800; color:#5BBFEA;">3x</span> increase in quarterly analyst engagement — 10 meetings total conducted.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </section>
 
 <!-- SKILLS -->
@@ -720,13 +603,12 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
       <p class="contact-sub">Open to global marketing, account management, and social marketing roles at global tech companies operating in Korea.</p>
     </div>
     <div class="c-links reveal">
-      <a href="/cdn-cgi/l/email-protection#bed9dbdac9c98e8efed9d3dfd7d290ddd1d3" class="c-link""><div><span class="c-lbl">Email</span><span class="c-val"><span class="__cf_email__" data-cfemail="fc9b99988b8bccccbc9b919d9590d29f9391">gedww00@gmail.com</span></span></div></a>
+      <a href="/cdn-cgi/l/email-protection#bed9dbdac9c98e8efed9d3dfd7d290ddd1d3" class="c-link"><div><span class="c-lbl">Email</span><span class="c-val"><span class="__cf_email__" data-cfemail="fc9b99988b8bccccbc9b919d9590d29f9391">gedww00@gmail.com</span></span></div></a>
       <a href="https://linkedin.com/in/seo-yeon-jung-544682373" target="_blank" class="c-link b"><div><span class="c-lbl">LinkedIn</span><span class="c-val">linkedin.com/in/seo-yeon-jung</span></div></a>
     </div>
   </div>
 </section>
 
-  
 <!-- AI NOTE -->
 <div id="ai-note">
   <div class="ab ab1"></div><div class="ab ab2"></div><div class="ab ab3"></div>
@@ -742,6 +624,8 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
     <span class="ai-tag">Cover Letter Generation</span>
   </div>
 </div>
+
+
 
 <footer>
   <p>© 2026 Seo yeon Jung (Wawa) · Seoul, Korea</p>
