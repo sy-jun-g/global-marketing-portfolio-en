@@ -6,226 +6,170 @@
 <title>Seo yeon Jung — Global Marketer</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@300;400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body { background:#fffdf9; color:#2d2d2d; font-family:'Nunito',sans-serif; overflow-x:hidden; }
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:#ffffff;color:#1a1a1a;font-family:'Nunito',sans-serif;overflow-x:hidden;}
 
-nav {
-  position:fixed; top:0; left:0; right:0; z-index:100;
-  display:flex; justify-content:space-between; align-items:center;
-  padding:1.2rem 4rem;
-  background:rgba(255,253,249,0.93);
-  backdrop-filter:blur(12px);
-  border-bottom:2.5px solid #FFB3C6;
-}
-.nav-logo { font-family:'Bebas Neue',sans-serif; font-size:1.5rem; letter-spacing:0.08em; color:#2d2d2d; text-decoration:none; }
-.nav-logo span { color:#FF8FAB; }
-.nav-links { display:flex; gap:2.5rem; list-style:none; }
-.nav-links a { color:#999; text-decoration:none; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:700; transition:color 0.2s; }
-.nav-links a:hover { color:#FF8FAB; }
-.ai-badge { font-family:'DM Mono',monospace; font-size:0.62rem; color:#5BBFEA; border:1.5px solid #5BBFEA; padding:0.3rem 0.8rem; border-radius:20px; background:rgba(91,191,234,0.1); }
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #f0f0f0;}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.08em;color:#1a1a1a;text-decoration:none;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{color:#999;text-decoration:none;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;transition:color 0.2s;}
+.nav-links a:hover{color:#1a1a1a;}
+.nav-badge{font-family:'DM Mono',monospace;font-size:0.62rem;color:#999;border:1px solid #e0e0e0;padding:0.3rem 0.8rem;border-radius:20px;}
 
 /* HERO */
-#hero { min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:8rem 4rem 6rem; position:relative; overflow:hidden; }
-.blob { position:absolute; border-radius:50%; filter:blur(70px); opacity:0.3; z-index:0; }
-.b1 { width:420px; height:420px; background:#FFB3C6; top:-120px; right:-100px; }
-.b2 { width:320px; height:320px; background:#FFE034; bottom:0; right:200px; }
-.b3 { width:260px; height:260px; background:#A8D8F0; top:200px; left:-80px; }
-.hero-inner { position:relative; z-index:1; max-width:680px; }
-.hero-eyebrow { font-family:'DM Mono',monospace; font-size:0.72rem; color:#FF8FAB; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:1.2rem; opacity:0; animation:fadeUp 0.7s ease 0.1s forwards; }
-.hero-name { font-family:'Bebas Neue',sans-serif; font-size:clamp(60px,10vw,120px); line-height:0.9; letter-spacing:-0.01em; color:#2d2d2d; margin-bottom:2rem; opacity:0; animation:fadeUp 0.7s ease 0.3s forwards; }
-.hero-name .pink { color:#FF8FAB; }
-.fun-cards { display:flex; flex-wrap:wrap; gap:0.7rem; margin-bottom:2.5rem; opacity:0; animation:fadeUp 0.7s ease 0.5s forwards; }
-.fun-card { background:#fffdf9; border:2px solid #FFB3C6; border-radius:16px; padding:0.65rem 1.1rem; font-size:0.88rem; font-weight:700; color:#2d2d2d; display:flex; align-items:center; gap:0.5rem; box-shadow:3px 3px 0 #FFB3C6; }
-.fun-card.y { border-color:#F5C800; box-shadow:3px 3px 0 #F5C800; }
-.fun-card.b { border-color:#5BBFEA; box-shadow:3px 3px 0 #5BBFEA; }
-.hero-transition { font-size:1.05rem; color:#2d2d2d; line-height:1.85; border-left:4px solid #F5C800; padding-left:1.2rem; max-width:540px; opacity:0; animation:fadeUp 0.7s ease 0.7s forwards; }
-.hero-transition strong { font-weight:800; color:#FF8FAB; }
-.hero-cta { display:flex; gap:1rem; margin-top:2.5rem; opacity:0; animation:fadeUp 0.7s ease 0.9s forwards; }
-.btn-p { background:#FF8FAB; color:white; padding:0.85rem 2rem; font-family:'Nunito',sans-serif; font-weight:800; font-size:0.82rem; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none; border-radius:10px; box-shadow:4px 4px 0 #FFB3C6; display:inline-block; }
-.btn-o { color:#2d2d2d; border:2px solid #2d2d2d; padding:0.85rem 2rem; font-size:0.82rem; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none; border-radius:10px; font-weight:800; box-shadow:4px 4px 0 rgba(0,0,0,0.1); display:inline-block; }
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:8rem 4rem 6rem;position:relative;background:#ffffff;}
+.hero-tag{font-family:'DM Mono',monospace;font-size:0.72rem;color:#999;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.7s ease 0.1s forwards;}
+.hero-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,10vw,130px);line-height:0.9;letter-spacing:-0.01em;color:#1a1a1a;margin-bottom:1.2rem;opacity:0;animation:fadeUp 0.7s ease 0.3s forwards;}
+.hero-name span{color:#FFB3C6;}
+.hero-sub{font-size:1.1rem;color:#666;max-width:520px;line-height:1.75;font-weight:400;margin-bottom:2.5rem;opacity:0;animation:fadeUp 0.7s ease 0.5s forwards;}
+.hero-stats{display:flex;gap:3rem;margin-bottom:3rem;opacity:0;animation:fadeUp 0.7s ease 0.7s forwards;}
+.hero-stat-n{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:#1a1a1a;line-height:1;}
+.hero-stat-l{font-family:'DM Mono',monospace;font-size:0.6rem;color:#999;letter-spacing:0.1em;text-transform:uppercase;margin-top:0.2rem;}
+.hero-cta{display:flex;gap:1rem;opacity:0;animation:fadeUp 0.7s ease 0.9s forwards;}
+.btn-p{background:#1a1a1a;color:#fff;padding:0.9rem 2.2rem;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.82rem;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;border-radius:8px;transition:background 0.2s;}
+.btn-p:hover{background:#333;}
+.btn-o{color:#1a1a1a;border:1.5px solid #1a1a1a;padding:0.9rem 2.2rem;font-size:0.82rem;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;border-radius:8px;font-weight:800;transition:background 0.2s,color 0.2s;}
+.btn-o:hover{background:#1a1a1a;color:#fff;}
+.hero-line{position:absolute;right:4rem;top:50%;transform:translateY(-50%);width:1px;height:200px;background:linear-gradient(to bottom,transparent,#FFB3C6,transparent);}
 
 /* MARQUEE */
-.mq-wrap { overflow:hidden; padding:0.9rem 0; background:#FFE034; border-top:2px solid #F5C800; border-bottom:2px solid #F5C800; }
-.mq { display:flex; gap:2.5rem; animation:marquee 22s linear infinite; white-space:nowrap; }
-.mq span { font-family:'Bebas Neue',sans-serif; font-size:1rem; letter-spacing:0.1em; color:#2d2d2d; flex-shrink:0; opacity:0.65; }
-.mq span.ac { color:#FF8FAB; opacity:1; }
+.mq-wrap{overflow:hidden;padding:1rem 0;background:#fafafa;border-top:1px solid #f0f0f0;border-bottom:1px solid #f0f0f0;}
+.mq{display:flex;gap:3rem;animation:marquee 25s linear infinite;white-space:nowrap;}
+.mq span{font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.1em;color:#bbb;flex-shrink:0;text-transform:uppercase;}
+.mq span.ac{color:#FFB3C6;}
 
-/* SECTION BASE */
-.sec { padding:7rem 4rem; }
-.sec-label { font-family:'DM Mono',monospace; font-size:0.68rem; color:#FF8FAB; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:0.8rem; display:flex; align-items:center; gap:0.8rem; }
-.sec-label::before { content:''; display:block; width:28px; height:2px; background:#FF8FAB; border-radius:2px; }
-.sec-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,5.5vw,72px); line-height:0.95; letter-spacing:-0.01em; margin-bottom:3.5rem; color:#2d2d2d; }
+/* SECTIONS */
+.sec{padding:7rem 4rem;}
+.sec-label{font-family:'DM Mono',monospace;font-size:0.68rem;color:#FFB3C6;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.8rem;display:flex;align-items:center;gap:0.8rem;}
+.sec-label::before{content:'';display:block;width:24px;height:1px;background:#FFB3C6;}
+.sec-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5.5vw,68px);line-height:0.95;letter-spacing:-0.01em;margin-bottom:3.5rem;color:#1a1a1a;}
 
 /* ABOUT */
-.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
-.about-p { color:#555; font-size:1.1rem; line-height:1.85; margin-bottom:1.4rem; font-weight:400; }
-.about-p strong { color:#2d2d2d; font-weight:800; }
-.stats-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-.stat { background:#fffdf9; padding:1.8rem; border-radius:16px; border:2px solid #FFB3C6; box-shadow:0 2px 12px rgba(0,0,0,0.05); }
-.stat.y { border-color:#F5C800; }
-.stat.b { border-color:#5BBFEA; }
-.stat.p2 { border-color:#FF8FAB; }
-.stat-n { font-family:'Bebas Neue',sans-serif; font-size:3rem; line-height:1; color:#FF8FAB; }
-.stat.y .stat-n { color:#b38f00; }
-.stat.b .stat-n { color:#5BBFEA; }
-.stat.p2 .stat-n { color:#FF8FAB; }
-.stat-l { font-size:0.7rem; color:#999; text-transform:uppercase; letter-spacing:0.08em; margin-top:0.5rem; font-weight:700; }
+.about-grid{display:grid;grid-template-columns:300px 1fr 1fr;gap:4rem;align-items:start;}
+.profile-img{width:260px;height:260px;border-radius:16px;overflow:hidden;border:1px solid #f0f0f0;}
+.profile-img img{width:100%;height:100%;object-fit:cover;}
+.about-p{color:#555;font-size:1rem;line-height:1.85;margin-bottom:1.2rem;font-weight:400;}
+.about-p strong{color:#1a1a1a;font-weight:800;}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#f0f0f0;}
+.stat{background:#fff;padding:1.5rem;border:none;}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;line-height:1;color:#1a1a1a;}
+.stat-n span{color:#FFB3C6;}
+.stat-l{font-size:0.7rem;color:#999;text-transform:uppercase;letter-spacing:0.08em;margin-top:0.4rem;font-weight:700;}
 
 /* EXPERIENCE */
-.exp { background:#fffdf9; border-radius:20px; padding:2.5rem; margin-bottom:14px; border:2px solid #FFB3C6; box-shadow:0 2px 12px rgba(0,0,0,0.04); }
-.exp.y { border-color:#F5C800; }
-.exp.b { border-color:#5BBFEA; }
-.exp-hd { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.2rem; }
-.exp-co { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.05em; color:#2d2d2d; }
-.exp-pd { font-family:'DM Mono',monospace; font-size:0.65rem; color:#999; letter-spacing:0.08em; display:block; margin-bottom:0.3rem; }
-.exp-rl { font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#FF8FAB; }
-.exp.y .exp-rl { color:#b38f00; }
-.exp.b .exp-rl { color:#5BBFEA; }
-.exp-desc { color:#555; font-size:1rem; line-height:1.8; margin-bottom:1.4rem; }
-.kpis { display:flex; flex-wrap:wrap; gap:0.5rem; }
-.kpi { font-family:'DM Mono',monospace; font-size:0.67rem; padding:0.33rem 0.8rem; border-radius:20px; background:rgba(255,143,171,0.12); color:#FF8FAB; border:1px solid rgba(255,143,171,0.3); }
-.exp.y .kpi { background:rgba(179,143,0,0.1); color:#b38f00; border-color:rgba(179,143,0,0.3); }
-.exp.b .kpi { background:rgba(91,191,234,0.12); color:#5BBFEA; border-color:rgba(91,191,234,0.3); }
+.exp{border-top:1px solid #f0f0f0;padding:2.5rem 0;}
+.exp-hd{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.2rem;}
+.exp-co{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.05em;color:#1a1a1a;}
+.exp-pd{font-family:'DM Mono',monospace;font-size:0.65rem;color:#bbb;letter-spacing:0.08em;}
+.exp-rl{font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:#FFB3C6;margin-top:0.3rem;}
+.exp-bullets{display:flex;flex-direction:column;gap:0.6rem;}
+.exp-bullet{font-size:0.92rem;color:#444;display:flex;gap:0.8rem;line-height:1.65;}
+.exp-bullet::before{content:'—';color:#FFB3C6;flex-shrink:0;font-family:'DM Mono',monospace;}
+.exp-bullet strong{color:#1a1a1a;font-weight:800;}
+.kpis{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem;}
+.kpi{font-family:'DM Mono',monospace;font-size:0.65rem;padding:0.3rem 0.75rem;border-radius:20px;background:#fafafa;color:#666;border:1px solid #f0f0f0;}
 
 /* PROJECTS */
-.proj-card { background:#fffdf9; border-radius:24px; padding:2.5rem; margin-bottom:16px; border:2px solid #FFB3C6; }
-.proj-card.y { border-color:#F5C800; }
-.proj-card.b { border-color:#5BBFEA; }
-.proj-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:2rem; flex-wrap:wrap; gap:1rem; }
-.proj-num { font-family:'Bebas Neue',sans-serif; font-size:3.5rem; line-height:1; color:#2d2d2d; opacity:0.12; }
-.proj-ttl { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.05em; color:#2d2d2d; margin-top:0.3rem; }
-.proj-contrib { font-family:'DM Mono',monospace; font-size:0.65rem; color:#999; letter-spacing:0.1em; margin-top:0.4rem; }
-.proj-tags { display:flex; flex-wrap:wrap; gap:0.5rem; align-items:flex-start; }
-.ptag { font-family:'DM Mono',monospace; font-size:0.65rem; padding:0.35rem 0.9rem; border-radius:20px; background:#faf8f5; color:#2d2d2d; border:1.5px solid rgba(0,0,0,0.12); font-weight:500; }
-.ptag.ai { background:rgba(255,143,171,0.15); color:#FF8FAB; border-color:#FF8FAB; }
-.proj-grid { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; }
-.proj-lbl { font-family:'DM Mono',monospace; font-size:0.65rem; color:#FF8FAB; letter-spacing:0.15em; text-transform:uppercase; display:block; margin-bottom:0.5rem; margin-top:1.4rem; }
-.proj-card.y .proj-lbl { color:#b38f00; }
-.proj-card.b .proj-lbl { color:#5BBFEA; }
-.proj-lbl:first-child { margin-top:0; }
-.proj-txt { font-size:0.88rem; color:#444; line-height:1.8; }
-.proj-txt strong { color:#2d2d2d; font-weight:800; }
-.result-box { background:#faf8f5; border-radius:16px; padding:1.5rem; margin-top:1.4rem; border:2px solid #FFB3C6; }
-.proj-card.y .result-box { border-color:#F5C800; }
-.proj-card.b .result-box { border-color:#5BBFEA; }
-.result-lbl { font-family:'DM Mono',monospace; font-size:0.65rem; color:#FF8FAB; letter-spacing:0.15em; text-transform:uppercase; display:block; margin-bottom:1rem; }
-.proj-card.y .result-lbl { color:#b38f00; }
-.proj-card.b .result-lbl { color:#5BBFEA; }
-.result-row { display:flex; gap:1.5rem; flex-wrap:wrap; }
-.result-item {}
-.result-num { font-family:'Bebas Neue',sans-serif; font-size:2.2rem; line-height:1; display:block; color:#FF8FAB; }
-.proj-card.y .result-num { color:#b38f00; }
-.proj-card.b .result-num { color:#5BBFEA; }
-.result-desc { font-size:0.68rem; color:#999; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-top:0.2rem; }
+.proj{border:1px solid #f0f0f0;border-radius:16px;padding:2.5rem;margin-bottom:1rem;transition:border-color 0.3s;}
+.proj:hover{border-color:#FFB3C6;}
+.proj-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;}
+.proj-num{font-family:'Bebas Neue',sans-serif;font-size:3rem;line-height:1;color:#f0f0f0;}
+.proj-ttl{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.05em;color:#1a1a1a;margin-top:0.2rem;}
+.proj-contrib{font-family:'DM Mono',monospace;font-size:0.6rem;color:#bbb;letter-spacing:0.1em;margin-top:0.3rem;}
+.proj-tags{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:flex-start;}
+.ptag{font-family:'DM Mono',monospace;font-size:0.62rem;padding:0.3rem 0.8rem;border-radius:20px;background:#fafafa;color:#666;border:1px solid #f0f0f0;}
+.ptag.ai{background:#fff0f3;color:#FF8FAB;border-color:#FFB3C6;}
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;}
+.proj-lbl{font-family:'DM Mono',monospace;font-size:0.6rem;color:#FFB3C6;letter-spacing:0.15em;text-transform:uppercase;display:block;margin-bottom:0.4rem;margin-top:1.2rem;}
+.proj-lbl:first-child{margin-top:0;}
+.proj-txt{font-size:0.9rem;color:#555;line-height:1.75;}
+.proj-txt strong{color:#1a1a1a;font-weight:800;}
+.result-box{background:#fafafa;border-radius:12px;padding:1.2rem;margin-top:1.2rem;border:1px solid #f0f0f0;}
+.result-lbl{font-family:'DM Mono',monospace;font-size:0.6rem;color:#FFB3C6;letter-spacing:0.15em;text-transform:uppercase;display:block;margin-bottom:0.8rem;}
+.result-row{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.result-num{font-family:'Bebas Neue',sans-serif;font-size:2rem;line-height:1;display:block;color:#1a1a1a;}
+.result-desc{font-size:0.65rem;color:#999;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;display:block;margin-top:0.2rem;}
+
+/* GRAPH */
+.graph-box{background:#fafafa;border-radius:12px;padding:1.2rem;margin-top:1rem;border:1px solid #f0f0f0;}
+.graph-lbl{font-family:'DM Mono',monospace;font-size:0.6rem;color:#FFB3C6;letter-spacing:0.12em;text-transform:uppercase;display:block;margin-bottom:0.8rem;}
 
 /* SKILLS */
-.skills-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-.sg { background:#fffdf9; padding:2.2rem; border-radius:20px; border:2px solid #FFB3C6; }
-.sg.y { border-color:#F5C800; }
-.sg.b { border-color:#A8D8F0; }
-.sg-title { font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:0.08em; color:#FF8FAB; margin-bottom:1.4rem; }
-.sg.y .sg-title { color:#b38f00; }
-.sg.b .sg-title { color:#5BBFEA; }
-.sk-list { display:flex; flex-direction:column; gap:0.6rem; }
-.sk { font-size:0.95rem; color:#555; display:flex; align-items:center; gap:0.5rem; font-weight:600; }
-.sk::before { content:'✦'; font-size:0.6rem; color:#FF8FAB; }
-.sg.y .sk::before { color:#b38f00; }
-.sg.b .sk::before { color:#5BBFEA; }
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#f0f0f0;}
+.sg{background:#fff;padding:2rem;}
+.sg-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.08em;color:#FFB3C6;margin-bottom:1.2rem;}
+.sk-list{display:flex;flex-direction:column;gap:0.5rem;}
+.sk{font-size:0.85rem;color:#555;display:flex;align-items:center;gap:0.5rem;font-weight:600;}
+.sk::before{content:'—';font-family:'DM Mono',monospace;font-size:0.6rem;color:#FFB3C6;}
 
 /* CERTS */
-.cert-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
-.cert { background:#fffdf9; padding:1.7rem 2rem; border-radius:16px; display:flex; align-items:center; gap:1.2rem; border:2px solid #A8D8F0; box-shadow:0 2px 8px rgba(0,0,0,0.04); }
-.cert.p { border-color:#FFB3C6; }
-.cert-ico { width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:1.1rem; flex-shrink:0; background:rgba(168,216,240,0.3); color:#5BBFEA; }
-.cert.p .cert-ico { background:rgba(255,179,198,0.3); color:#FF8FAB; }
-.cert-name { font-size:0.97rem; font-weight:700; color:#2d2d2d; margin-bottom:0.2rem; }
-.cert-issuer { font-family:'DM Mono',monospace; font-size:0.6rem; color:#999; letter-spacing:0.08em; text-transform:uppercase; }
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#f0f0f0;}
+.cert{background:#fff;padding:1.5rem 2rem;display:flex;align-items:center;gap:1rem;}
+.cert-ico{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1rem;flex-shrink:0;background:#fff0f3;color:#FF8FAB;}
+.cert-name{font-size:0.85rem;font-weight:700;color:#1a1a1a;margin-bottom:0.2rem;}
+.cert-issuer{font-family:'DM Mono',monospace;font-size:0.58rem;color:#bbb;letter-spacing:0.08em;text-transform:uppercase;}
 
 /* GLOBAL */
-.global-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
-.tl { background:#fffdf9; border-radius:16px; padding:2rem 2.2rem; border:2px solid #A8D8F0; }
-.tl.y { border-color:#FFE034; }
-.tl.p { border-color:#FFB3C6; }
-.tl.p2 { border-color:#FF8FAB; }
-.tl-flag { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.08em; color:#2d2d2d; margin-bottom:0.5rem; display:block; }
-.tl-period { font-family:'DM Mono',monospace; font-size:0.65rem; color:#999; letter-spacing:0.1em; margin-bottom:0.4rem; }
-.tl-loc { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.05em; color:#2d2d2d; margin-bottom:0.5rem; }
-.tl-desc { font-size:0.94rem; color:#666; line-height:1.65; }
-
-/* LANGUAGES */
-.lang-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-.lang { background:#fffdf9; padding:2.5rem 2rem; border-radius:20px; text-align:center; border:2px solid #A8D8F0; }
-.lang.p { border-color:#FFB3C6; }
-.lang.y { border-color:#F5C800; }
-.lang-flag { font-size:2.4rem; margin-bottom:1rem; display:block; }
-.lang-name { font-family:'Bebas Neue',sans-serif; font-size:2.2rem; letter-spacing:0.06em; color:#2d2d2d; margin-bottom:0.5rem; }
-.lang-lvl { font-family:'DM Mono',monospace; font-size:0.6rem; color:#999; letter-spacing:0.12em; text-transform:uppercase; font-weight:500; }
+.global-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#f0f0f0;margin-bottom:1px;}
+.tl{background:#fff;padding:2rem;}
+.tl-flag{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.06em;color:#1a1a1a;display:block;margin-bottom:0.3rem;}
+.tl-period{font-family:'DM Mono',monospace;font-size:0.62rem;color:#bbb;letter-spacing:0.1em;margin-bottom:0.3rem;}
+.tl-lang{font-family:'DM Mono',monospace;font-size:0.65rem;color:#FFB3C6;letter-spacing:0.08em;margin-bottom:0.5rem;display:block;}
+.tl-desc{font-size:0.84rem;color:#666;line-height:1.65;}
+.lang-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#f0f0f0;}
+.lang{background:#fff;padding:1.8rem 2rem;text-align:center;}
+.lang-flag{font-size:2rem;display:block;margin-bottom:0.6rem;}
+.lang-name{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:0.06em;color:#1a1a1a;margin-bottom:0.3rem;}
+.lang-lvl{font-family:'DM Mono',monospace;font-size:0.58rem;color:#bbb;letter-spacing:0.12em;text-transform:uppercase;}
 
 /* AI */
-#ai-note { background:#2d2d2d; padding:5rem 4rem; text-align:center; position:relative; overflow:hidden; }
-.ab { position:absolute; border-radius:50%; filter:blur(80px); opacity:0.12; }
-.ab1{width:350px;height:350px;background:#FFB3C6;top:-80px;left:-80px;}
-.ab2{width:300px;height:300px;background:#FFE034;bottom:-80px;right:-80px;}
-.ab3{width:250px;height:250px;background:#A8D8F0;top:50%;right:10%;}
-.ai-lbl { font-family:'DM Mono',monospace; font-size:0.68rem; color:#FFE034; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1rem; position:relative; z-index:1; }
-.ai-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,6vw,80px); color:#fffdf9; line-height:0.95; margin-bottom:1.5rem; letter-spacing:-0.01em; position:relative; z-index:1; }
-.ai-title span { color:#FFE034; }
-.ai-txt { font-size:1rem; color:rgba(255,253,249,0.6); max-width:580px; margin:0 auto 2rem; line-height:1.8; position:relative; z-index:1; }
-.ai-tags { display:flex; justify-content:center; flex-wrap:wrap; gap:0.7rem; position:relative; z-index:1; }
-.ai-tag { background:rgba(255,255,255,0.07); color:rgba(255,253,249,0.75); font-family:'DM Mono',monospace; font-size:0.67rem; padding:0.4rem 1rem; border-radius:20px; border:1px solid rgba(255,255,255,0.1); }
+#ai-note{background:#1a1a1a;padding:5rem 4rem;text-align:center;}
+.ai-lbl{font-family:'DM Mono',monospace;font-size:0.68rem;color:#FFB3C6;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1rem;}
+.ai-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,72px);color:#fff;line-height:0.95;margin-bottom:1.5rem;}
+.ai-title span{color:#FFB3C6;}
+.ai-txt{font-size:0.95rem;color:rgba(255,255,255,0.5);max-width:520px;margin:0 auto 2rem;line-height:1.8;}
+.ai-tags{display:flex;justify-content:center;flex-wrap:wrap;gap:0.6rem;}
+.ai-tag{background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);font-family:'DM Mono',monospace;font-size:0.65rem;padding:0.35rem 0.9rem;border-radius:20px;border:1px solid rgba(255,255,255,0.1);}
 
 /* CONTACT */
-.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
-.contact-big { font-family:'Bebas Neue',sans-serif; font-size:clamp(48px,7vw,90px); line-height:0.9; letter-spacing:-0.01em; color:#2d2d2d; }
-.contact-big .cp { color:#FF8FAB; display:block; }
-.contact-sub { font-size:1rem; color:#888; margin-top:2rem; line-height:1.7; max-width:360px; }
-.c-links { display:flex; flex-direction:column; gap:12px; }
-.c-link { display:flex; align-items:center; gap:1.2rem; text-decoration:none; padding:1.5rem 1.8rem; background:#fffdf9; border-radius:16px; border:2px solid #FFB3C6; box-shadow:0 2px 8px rgba(0,0,0,0.04); color:#2d2d2d; }
-.c-link.b { border-color:#A8D8F0; }
-.c-lbl { font-family:'DM Mono',monospace; font-size:0.6rem; color:#999; letter-spacing:0.1em; text-transform:uppercase; display:block; margin-bottom:0.3rem; }
-.c-val { font-size:0.88rem; font-weight:700; color:#2d2d2d; }
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.contact-big{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,7vw,90px);line-height:0.9;color:#1a1a1a;}
+.contact-big span{color:#FFB3C6;display:block;}
+.contact-sub{font-size:0.9rem;color:#888;margin-top:1.5rem;line-height:1.7;max-width:360px;}
+.c-links{display:flex;flex-direction:column;gap:1px;background:#f0f0f0;}
+.c-link{display:flex;align-items:center;gap:1rem;text-decoration:none;padding:1.4rem 1.8rem;background:#fff;color:#1a1a1a;transition:background 0.2s;}
+.c-link:hover{background:#fafafa;}
+.c-lbl{font-family:'DM Mono',monospace;font-size:0.58rem;color:#bbb;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:0.2rem;}
+.c-val{font-size:0.88rem;font-weight:700;color:#1a1a1a;}
 
-footer { background:#2d2d2d; padding:1.8rem 4rem; display:flex; justify-content:space-between; align-items:center; }
-footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253,249,0.35); letter-spacing:0.1em; }
+footer{background:#fafafa;padding:1.8rem 4rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #f0f0f0;}
+footer p{font-family:'DM Mono',monospace;font-size:0.6rem;color:#bbb;letter-spacing:0.1em;}
 
-@keyframes fadeUp { from{opacity:0;transform:translateY(28px);} to{opacity:1;transform:translateY(0);} }
-@keyframes marquee { from{transform:translateX(0);} to{transform:translateX(-50%);} }
-.reveal { opacity:1; transform:translateY(0); transition:opacity 0.7s ease,transform 0.7s ease; }
-.reveal.visible { opacity:1; transform:translateY(0); }
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
 
 @media(max-width:900px){
   nav{padding:1rem 1.5rem;}
   .sec{padding:5rem 1.5rem;}
   #hero{padding:7rem 1.5rem 4rem;}
-  .about-grid,.contact-grid,.global-grid,.skills-grid,.lang-grid,.proj-grid{grid-template-columns:1fr;}
-  .cert-grid{grid-template-columns:1fr;}
+  .about-grid,.contact-grid,.global-grid,.skills-grid,.lang-grid,.proj-grid,.cert-grid{grid-template-columns:1fr;}
   .exp-hd{flex-direction:column;gap:0.5rem;}
   .nav-links{display:none;}
+  .hero-stats{gap:1.5rem;flex-wrap:wrap;}
+  .hero-line{display:none;}
   #ai-note{padding:4rem 1.5rem;}
   footer{padding:1.5rem;flex-direction:column;gap:0.5rem;text-align:center;}
+  #about-grid{grid-template-columns:1fr!important;}
 }
-
-  @media(max-width:900px){
-    #about-grid {
-      grid-template-columns: 1fr !important;
-      gap: 2rem !important;
-    }
-    #about-grid > div:first-child {
-      justify-content: center !important;
-    }
-    #about-grid > div:first-child > div {
-      width: 180px !important;
-      height: 180px !important;
-    }
-  }
-
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">Seo yeon <span>Jung</span></a>
+  <a href="#" class="nav-logo">SEO YEON JUNG</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Work</a></li>
@@ -233,186 +177,155 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <span class="ai-badge">✦ Built with AI Tools</span>
+  <span class="nav-badge">✦ Built with AI Tools</span>
 </nav>
 
+<!-- HERO -->
 <section id="hero">
-  <div class="blob b1"></div>
-  <div class="blob b2"></div>
-  <div class="blob b3"></div>
-  
-  <div class="hero-inner">
-    <div class="hero-eyebrow">✦ First things first — who am I, really?</div>
-    <h1 class="hero-name">Hi, I'm<br><span class="pink">Wawa. 🐾</span></h1>
-    <div class="fun-cards">
-      <div class="fun-card">🐰 Usahana obsessed</div>
-      <div class="fun-card y">🐕 Proud dog mom</div>
-      <div class="fun-card b">🤖 AI user</div>
-      <div class="fun-card">🌏 International background</div>
-      <div class="fun-card y">💄 Beauty & makeup lover</div>
-      <div class="fun-card b">💻 Always online</div>
-      <div class="fun-card">👗Learning fasion</div>
-      <div class="fun-card y">🎤 K-POP listener</div>
-      <div class="fun-card b">🖼️ Into 2D</div>
-    </div>
-    <p class="hero-transition">Okay, now that you know me as a person...<br><strong>let me tell you what I do for work. 👇</strong></p>
-    <div class="hero-cta" style="margin-bottom:3rem;">
-      <a href="#about" class="btn-p">See My Work</a>
-      <a href="#contact" class="btn-o">Get in Touch</a>
-    </div>
+  <div class="hero-line"></div>
+  <div class="hero-tag">✦ Global Marketer · Seoul, Korea</div>
+  <h1 class="hero-name">Seo yeon<br><span>Jung.</span></h1>
+  <p class="hero-sub">Multilingual global marketer bridging data and storytelling across cultures. Native-level English and Korean, backed by 12+ years across the US, UAE, and Japan.</p>
+  <div class="hero-stats">
+    <div><div class="hero-stat-n">40<span style="font-size:1.2rem;">%</span></div><div class="hero-stat-l">YoY AI Traffic Growth</div></div>
+    <div><div class="hero-stat-n">93<span style="font-size:1.2rem;">%</span></div><div class="hero-stat-l">Ad CPA Reduction</div></div>
+    <div><div class="hero-stat-n">11<span style="font-size:1.2rem;">/11</span></div><div class="hero-stat-l">Global Award Wins</div></div>
+    <div><div class="hero-stat-n">200<span style="font-size:1.2rem;">%</span></div><div class="hero-stat-l">Enrollment Growth</div></div>
   </div>
-  
-</div>
+  <div class="hero-cta" style="margin-bottom:3rem;">
+    <a href="#experience" class="btn-p">View Work</a>
+    <a href="#contact" class="btn-o">Get in Touch</a>
+  </div>
+</section>
 
+<!-- MARQUEE -->
 <div class="mq-wrap">
   <div class="mq">
-    <span class="ac">✦</span><span>Global Marketing</span><span class="ac">✦</span><span>SEO / GEO</span><span class="ac">✦</span><span>B2B & B2C Campaigns</span><span class="ac">✦</span><span>LinkedIn Ads</span><span class="ac">✦</span><span>Content Strategy</span><span class="ac">✦</span><span>Gartner Relations</span><span class="ac">✦</span><span>Data Analytics</span><span class="ac">✦</span><span>English · Korean · Japanese</span>
-    <span class="ac">✦</span><span>Global Marketing</span><span class="ac">✦</span><span>SEO / GEO</span><span class="ac">✦</span><span>B2B & B2C Campaigns</span><span class="ac">✦</span><span>LinkedIn Ads</span><span class="ac">✦</span><span>Content Strategy</span><span class="ac">✦</span><span>Gartner Relations</span><span class="ac">✦</span><span>Data Analytics</span><span class="ac">✦</span><span>English · Korean · Japanese</span>
+    <span class="ac">✦</span><span>Global Marketing</span><span class="ac">✦</span><span>SEO / GEO</span><span class="ac">✦</span><span>B2B & B2C Campaigns</span><span class="ac">✦</span><span>Content Strategy</span><span class="ac">✦</span><span>Data Analytics</span><span class="ac">✦</span><span>Gartner Relations</span><span class="ac">✦</span><span>English · Korean · Japanese</span><span class="ac">✦</span><span>Prompt Engineering</span>
+    <span class="ac">✦</span><span>Global Marketing</span><span class="ac">✦</span><span>SEO / GEO</span><span class="ac">✦</span><span>B2B & B2C Campaigns</span><span class="ac">✦</span><span>Content Strategy</span><span class="ac">✦</span><span>Data Analytics</span><span class="ac">✦</span><span>Gartner Relations</span><span class="ac">✦</span><span>English · Korean · Japanese</span><span class="ac">✦</span><span>Prompt Engineering</span>
   </div>
 </div>
 
 <!-- ABOUT -->
-<section id="about" class="sec" style="background:#faf8f5;">
+<section id="about" class="sec" style="background:#fafafa;">
   <div class="sec-label">About</div>
-  <h2 class="sec-title reveal">The Marketer<br>Behind Wawa.</h2>
-  <div class="about-grid" style="grid-template-columns:300px 1fr 1fr; gap:3rem;" id="about-grid">
-    <div class="reveal" style="display:flex; justify-content:center; align-items:flex-start;">
-      <div style="width:260px; height:260px; border-radius:24px; border:4px solid #FFB3C6; overflow:hidden; box-shadow:8px 8px 0 #FFE034; flex-shrink:0;">
-        <img src="profile.jpg" alt="Seo yeon Jung" style="width:100%; height:100%; object-fit:cover;">
+  <h2 class="sec-title reveal">The Marketer<br>Behind the Work.</h2>
+  <div class="about-grid" id="about-grid">
+    <div class="reveal" style="display:flex;justify-content:center;">
+      <div class="profile-img">
+        <img src="images/profile.jpg" alt="Seo yeon Jung">
       </div>
     </div>
     <div class="reveal">
       <p class="about-p">I'm <strong>Seo yeon Jung</strong>, a global marketer based in Seoul with <strong>native-level English and Korean fluency</strong>, shaped by 12+ years living across the US, UAE, and Japan.</p>
-      <p class="about-p">I bridge the gap between <strong>data-driven performance marketing</strong> and <strong>globally resonant storytelling</strong> — running multi-channel campaigns, building brand authority through SEO/GEO content, and engaging enterprise stakeholders at the highest level.</p>
+      <p class="about-p">I bridge the gap between <strong>data-driven performance marketing</strong> and <strong>globally resonant storytelling</strong> — identifying audience needs, building content strategies from scratch, and delivering measurable outcomes.</p>
+      <p class="about-p">I started as a developer, moved into education, and found marketing. Each step added a layer: technical understanding, audience empathy, and a genuine curiosity for how people connect with ideas.</p>
     </div>
     <div class="stats-grid reveal">
-      <div class="stat"><div class="stat-n">40%</div><div class="stat-l">YoY AI Search Growth</div></div>
-      <div class="stat y"><div class="stat-n">11</div><div class="stat-l">Global Award Wins</div></div>
-      <div class="stat b"><div class="stat-n">~3K</div><div class="stat-l">LinkedIn Followers</div></div>
-      <div class="stat p2"><div class="stat-n">3+</div><div class="stat-l">Years B2B Experience</div></div>
+      <div class="stat"><div class="stat-n">40<span>%</span></div><div class="stat-l">YoY AI Search Growth</div></div>
+      <div class="stat"><div class="stat-n">11</div><div class="stat-l">Global Award Wins</div></div>
+      <div class="stat"><div class="stat-n">~58<span>%</span></div><div class="stat-l">LinkedIn Growth</div></div>
+      <div class="stat"><div class="stat-n">93<span>%</span></div><div class="stat-l">CPA Reduction</div></div>
     </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="sec" style="background:#fffdf9;">
-  <div class="sec-label">Work</div>
-  <h2 class="sec-title reveal">Experience.</h2>
+<section id="experience" class="sec" style="background:#fff;">
+  <div class="sec-label">Experience</div>
+  <h2 class="sec-title reveal">Work.</h2>
+
   <div class="exp reveal">
     <div class="exp-hd">
       <div><div class="exp-co">Penta Security</div><div class="exp-rl">Global Marketer</div></div>
       <div style="text-align:right;"><span class="exp-pd">Jun 2025 — Present</span></div>
     </div>
-    <p class="exp-desc">Leading global brand growth for a cybersecurity company. Independently manage LinkedIn advertising (KRW 4M/month), drive SEO/GEO content strategy, coordinate global award submissions, and facilitate enterprise-level analyst relations with Gartner.</p>
+    <div class="exp-bullets">
+      <div class="exp-bullet"><strong>AI Search Traffic +40% YoY:</strong> Optimized English content formats (FAQ structure, semantic headers) using Google Search Console, Tag Manager, and GA4.</div>
+      <div class="exp-bullet"><strong>Newsletter KPI 140%:</strong> Pivoted from product-push to value-first content — hit 500-subscriber quarterly target within 2 months of launch.</div>
+      <div class="exp-bullet"><strong>Ad CPA reduced 93% (KRW 30K to KRW 2K):</strong> Identified audience mismatch and shifted to content-objective targeting.</div>
+      <div class="exp-bullet"><strong>LinkedIn +58% (1,900 to ~3,000):</strong> Rebuilt dormant channel through content-first strategy and targeted paid campaigns.</div>
+      <div class="exp-bullet"><strong>100% award win rate (11/11):</strong> Independently prepared all submissions for Globee and Cybersecurity Excellence Awards.</div>
+      <div class="exp-bullet"><strong>PR cadence 1+/month (14 total, 10mo):</strong> Established consistent global media presence for a company with limited international visibility.</div>
+      <div class="exp-bullet"><strong>Website resolution ~92% faster:</strong> Resolved technical errors directly, eliminating developer dependency for routine site issues.</div>
+      <div class="exp-bullet"><strong>Gartner analyst relations (10 sessions):</strong> Presented complex cybersecurity and cloud concepts across Inquiry, Briefing, and Feedback formats.</div>
+    </div>
     <div class="kpis">
-      <span class="kpi">40% YoY AI Traffic Growth</span>
-      <span class="kpi">11 Global Award Wins</span>
-      <span class="kpi">5 Gartner Meetings (6mo)</span>
-      <span class="kpi">~3K LinkedIn Followers</span>
-      <span class="kpi">605 Newsletter Subscribers</span>
-      <span class="kpi">14 PR Placements (10mo)</span>
-      <span class="kpi">KRW 4M/mo Ad Budget</span>
-      <span class="kpi">WordPress Website Management</span>
+      <span class="kpi">SEO/GEO</span><span class="kpi">GA4</span><span class="kpi">Google Tag Manager</span><span class="kpi">Paid Social</span><span class="kpi">Newsletter</span><span class="kpi">PR</span><span class="kpi">Analyst Relations</span><span class="kpi">WordPress</span>
     </div>
   </div>
-  <div class="exp y reveal">
+
+  <div class="exp reveal">
     <div class="exp-hd">
       <div><div class="exp-co">JamCoding</div><div class="exp-rl">Head of English Coding Education</div></div>
       <div style="text-align:right;"><span class="exp-pd">Dec 2023 — May 2025</span></div>
     </div>
-    <p class="exp-desc">Led client-facing education and business growth at an English-medium coding academy. Grew enrollment through SNS marketing and KakaoTalk-based community channels, managed stakeholder relationships, and coached students to award-winning results.</p>
+    <div class="exp-bullets">
+      <div class="exp-bullet"><strong>Enrollment +200% organic only:</strong> Identified English coding as underserved niche — built positioning via Instagram and Naver Blog with zero paid media.</div>
+      <div class="exp-bullet"><strong>Curriculum 100% in English:</strong> Communicated complex topics clearly to audiences from elementary through graduate level.</div>
+      <div class="exp-bullet"><strong>Stakeholder management:</strong> Maintained high retention through consistent parent and partner communication.</div>
+    </div>
     <div class="kpis">
-      <span class="kpi">200% Enrollment Growth</span>
-      <span class="kpi">100% Cert Pass Rate</span>
-      <span class="kpi">KakaoTalk Channel Ops</span>
-      <span class="kpi">International School Outreach</span>
+      <span class="kpi">SNS Marketing</span><span class="kpi">KakaoTalk</span><span class="kpi">Content Creation</span><span class="kpi">B2C</span>
     </div>
   </div>
-  <div class="exp b reveal">
+
+  <div class="exp reveal">
     <div class="exp-hd">
       <div><div class="exp-co">Metadexter</div><div class="exp-rl">Junior Developer & AI Researcher</div></div>
       <div style="text-align:right;"><span class="exp-pd">Nov 2022 — Dec 2023</span></div>
     </div>
-    <p class="exp-desc">Contributed to full-stack product development and AI research at an early-stage startup — Flutter, NestJS, ML/AI modules, SQL databases, through App Store deployment.</p>
+    <div class="exp-bullets">
+      <div class="exp-bullet"><strong>Full-stack & analytics:</strong> Contributed to product build (Flutter, NestJS, ML/AI) and SQL-based analytics through App Store deployment.</div>
+    </div>
     <div class="kpis">
-      <span class="kpi">Full-stack Development</span>
-      <span class="kpi">App Store Deployment</span>
-      <span class="kpi">SQL & Data Analytics</span>
-      <span class="kpi">ML / AI Research</span>
+      <span class="kpi">Python</span><span class="kpi">SQL</span><span class="kpi">Flutter</span><span class="kpi">NestJS</span><span class="kpi">ML/AI</span>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="sec" style="background:#faf8f5;">
+<section id="projects" class="sec" style="background:#fafafa;">
   <div class="sec-label">Projects</div>
   <h2 class="sec-title reveal">Selected<br>Work.</h2>
 
   <!-- PROJECT 01 -->
-  <div class="proj-card reveal">
+  <div class="proj reveal">
     <div class="proj-top">
-      <div>
-        <div class="proj-num">01</div>
-        <div class="proj-ttl">LinkedIn Channel Revival</div>
-        <div class="proj-contrib">Contribution: 100%</div>
-      </div>
-      <div class="proj-tags">
-        <span class="ptag">Paid Social</span>
-        <span class="ptag">Content Strategy</span>
-        <span class="ptag ai">✦ LLM Tools</span>
-        <span class="ptag">Newsletter</span>
-      </div>
+      <div><div class="proj-num">01</div><div class="proj-ttl">LinkedIn Channel Revival</div><div class="proj-contrib">Contribution: 100%</div></div>
+      <div class="proj-tags"><span class="ptag">Paid Social</span><span class="ptag">Content Strategy</span><span class="ptag ai">✦ LLM Tools</span><span class="ptag">Newsletter</span></div>
     </div>
     <div class="proj-grid">
       <div>
         <span class="proj-lbl">Background</span>
-        <p class="proj-txt">The company's LinkedIn page had been dormant for over a year — most followers were inactive, and posts were limited to occasional global event updates. The long absence of a dedicated global marketer had left the channel on autopilot.</p>
+        <p class="proj-txt">The company's LinkedIn page had been dormant for over a year. Most followers were inactive, and posts were limited to occasional event updates. The absence of a dedicated global marketer had left the channel on autopilot.</p>
         <span class="proj-lbl">Goal</span>
-        <p class="proj-txt">Reactivate a "dead" page. Rather than jumping to lead generation, the immediate goal was a visible, measurable win: growing the follower count.</p>
+        <p class="proj-txt">Reactivate a dead page. Rather than jumping to lead generation, the immediate goal was a visible, measurable win: growing the follower count.</p>
         <span class="proj-lbl">Approach</span>
-        <p class="proj-txt">Targeted cybersecurity professionals in EMEA and the US with weekly curated industry news. Used <strong>LLM Tools</strong> to select trending topics, summarize news, and refine copy at speed. Supplemented with company updates in newsletter format.</p>
+        <p class="proj-txt">Targeted cybersecurity professionals in EMEA and the US with weekly curated industry news. Used <strong>LLM Tools</strong> to select trending topics, summarize news, and refine copy at speed.</p>
       </div>
       <div>
         <span class="proj-lbl">Lesson Learned</span>
-        <p class="proj-txt">Early ad setup was wrong — "follower objective" campaign drove CPA to KRW 30,000. Pivoted to content the audience actually wanted (weekly news), dropping CPA to KRW 2,000. Sometimes the best way to get what you want is to stop chasing it directly.</p>
+        <p class="proj-txt">Early ad setup drove CPA to KRW 30,000. Pivoted to content the audience actually wanted, dropping CPA to KRW 2,000. Sometimes the best way to get what you want is to stop chasing it directly.</p>
         <div class="result-box">
           <span class="result-lbl">Result</span>
           <div class="result-row">
-            <div class="result-item"><span class="result-num">~3K</span><span class="result-desc">Page Followers</span></div>
-            <div class="result-item"><span class="result-num">~700</span><span class="result-desc">Newsletter Subs in 2mo</span></div>
+            <div class="result-item"><span class="result-num">~58%</span><span class="result-desc">Follower Growth</span></div>
+            <div class="result-item"><span class="result-num">140%</span><span class="result-desc">Newsletter KPI</span></div>
             <div class="result-item"><span class="result-num">93%↓</span><span class="result-desc">CPA Reduction</span></div>
           </div>
         </div>
-        
-        <div style="margin-top:1rem; padding:1.2rem; border-radius:14px; border:2px solid #FFB3C6; background:#fffdf9;">
-          <p style="font-family:'DM Mono',monospace; font-size:0.6rem; color:#FF8FAB; letter-spacing:0.12em; text-transform:uppercase; margin:0 0 0.8rem 0;">Follower Growth</p>
-          <div style="display:flex; align-items:flex-end; gap:8px; height:80px; margin-bottom:0.8rem;">
-            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px;">
-              <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#FF8FAB; margin:0;">1K</p>
-              <div style="width:100%; height:22px; background:#FFB3C6; border-radius:3px 3px 0 0;"></div>
-              <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">Start</p>
-            </div>
-            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px;">
-              <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#FF8FAB; margin:0;">1.5K</p>
-              <div style="width:100%; height:38px; background:#FF9BB8; border-radius:3px 3px 0 0;"></div>
-              <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">3mo</p>
-            </div>
-            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px;">
-              <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#FF8FAB; margin:0;">2K</p>
-              <div style="width:100%; height:54px; background:#FF8FAB; border-radius:3px 3px 0 0;"></div>
-              <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">6mo</p>
-            </div>
-            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px;">
-              <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#FF5C7A; margin:0;">~3K</p>
-              <div style="width:100%; height:76px; background:#FF5C7A; border-radius:3px 3px 0 0;"></div>
-              <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">Now</p>
-            </div>
+        <div class="graph-box">
+          <p class="graph-lbl">Follower Growth</p>
+          <div style="display:flex;align-items:flex-end;gap:8px;height:80px;margin-bottom:0.8rem;">
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;"><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#FFB3C6;margin:0;">1K</p><div style="width:100%;height:22px;background:#FFB3C6;border-radius:3px 3px 0 0;"></div><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#bbb;margin:0;">Start</p></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;"><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#FF8FAB;margin:0;">1.5K</p><div style="width:100%;height:38px;background:#FF9BB8;border-radius:3px 3px 0 0;"></div><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#bbb;margin:0;">3mo</p></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;"><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#FF8FAB;margin:0;">2K</p><div style="width:100%;height:54px;background:#FF8FAB;border-radius:3px 3px 0 0;"></div><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#bbb;margin:0;">6mo</p></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;"><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#FF5C7A;margin:0;">~3K</p><div style="width:100%;height:76px;background:#FF5C7A;border-radius:3px 3px 0 0;"></div><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#bbb;margin:0;">Now</p></div>
           </div>
-          <div style="display:flex; justify-content:space-between; padding-top:0.6rem; border-top:1px solid #FFB3C6;">
-            <div><p style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:#FFB3C6; margin:0;">CPA ₩30K</p><p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">Before pivot</p></div>
-            <div style="text-align:right;"><p style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:#FF5C7A; margin:0;">CPA ₩2K</p><p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">After pivot (93%↓)</p></div>
-          </div>
-        </div>
+          <div style="display:flex;justify-content:space-between;padding-top:0.6rem;border-top:1px solid #f0f0f0;">
+            <div><p style="font-family:'Bebas Neue',sans-serif;font-size:1rem;color:#FFB3C6;margin:0;">CPA KRW 30K</p><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#bbb;margin:0;">Before</p></div>
+            <div style="text-align:right;"><p style="font-family:'Bebas Neue',sans-serif;font-size:1rem;color:#FF5C7A;margin:0;">CPA KRW 2K</p><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#bbb;margin:0;">After (93%↓)</p></div>
           </div>
         </div>
       </div>
@@ -420,18 +333,10 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
   </div>
 
   <!-- PROJECT 02 -->
-  <div class="proj-card y reveal">
+  <div class="proj reveal">
     <div class="proj-top">
-      <div>
-        <div class="proj-num">02</div>
-        <div class="proj-ttl">Global Award Submissions</div>
-        <div class="proj-contrib">Contribution: 90%</div>
-      </div>
-      <div class="proj-tags">
-        <span class="ptag">PR</span>
-        <span class="ptag">Cross-functional</span>
-        <span class="ptag">Brand Building</span>
-      </div>
+      <div><div class="proj-num">02</div><div class="proj-ttl">Global Award Submissions</div><div class="proj-contrib">Contribution: 90%</div></div>
+      <div class="proj-tags"><span class="ptag">PR</span><span class="ptag">Cross-functional</span><span class="ptag">Brand Building</span></div>
     </div>
     <div class="proj-grid">
       <div>
@@ -440,7 +345,7 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
         <span class="proj-lbl">Goal</span>
         <p class="proj-txt">Win 10+ categories across Globee Awards and Cybersecurity Excellence Awards — reestablishing the company's credibility on the global stage.</p>
         <span class="proj-lbl">Approach</span>
-        <p class="proj-txt">Independently researched, prepared, and submitted entries across 11 award categories. Worked closely with product managers to gather technical depth and translate complex product specs into compelling narratives.</p>
+        <p class="proj-txt">Independently researched, prepared, and submitted entries across 11 award categories. Worked closely with product managers to gather technical depth and translate complex specs into compelling narratives.</p>
       </div>
       <div>
         <span class="proj-lbl">Lesson Learned</span>
@@ -453,57 +358,38 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
             <div class="result-item"><span class="result-num">100%</span><span class="result-desc">Win Rate</span></div>
           </div>
         </div>
-        
-        <div style="margin-top:1rem; padding:1.2rem; border-radius:14px; border:2px solid #F5C800; background:#fffdf9;">
-          <p style="font-family:'DM Mono',monospace; font-size:0.6rem; color:#b38f00; letter-spacing:0.12em; text-transform:uppercase; margin:0 0 0.8rem 0;">Award Wins: Before vs After</p>
-          <div style="display:flex; align-items:flex-end; gap:1.5rem;">
-            <div style="display:flex; align-items:flex-end; gap:8px; flex-shrink:0;">
-              <div style="display:flex; flex-direction:column; align-items:center; gap:3px;">
-                <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">1</p>
-                <div style="width:36px; height:7px; background:#e8d870; border-radius:3px 3px 0 0;"></div>
-                <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">Before/yr</p>
-              </div>
-              <div style="display:flex; flex-direction:column; align-items:center; gap:3px;">
-                <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#b38f00; margin:0;">11</p>
-                <div style="width:36px; height:76px; background:#F5C800; border-radius:3px 3px 0 0;"></div>
-                <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">1Q After</p>
-              </div>
+        <div class="graph-box">
+          <p class="graph-lbl">Award Wins: Before vs After</p>
+          <div style="display:flex;align-items:flex-end;gap:1.5rem;">
+            <div style="display:flex;align-items:flex-end;gap:8px;flex-shrink:0;">
+              <div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#bbb;margin:0;">1</p><div style="width:36px;height:7px;background:#f0f0f0;border-radius:3px 3px 0 0;"></div><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#bbb;margin:0;">Before/yr</p></div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#FF8FAB;margin:0;">11</p><div style="width:36px;height:76px;background:#FFB3C6;border-radius:3px 3px 0 0;"></div><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#bbb;margin:0;">1Q After</p></div>
             </div>
-            <p style="font-family:'Nunito',sans-serif; font-size:0.82rem; color:#555; line-height:1.6; margin:0;"><span style="font-weight:800; color:#b38f00;">11x</span> more wins in a single quarter than the entire year before joining.</p>
+            <p style="font-family:'Nunito',sans-serif;font-size:0.82rem;color:#555;line-height:1.6;margin:0;"><strong style="color:#FF8FAB;">11x</strong> more wins in a single quarter than the entire year before joining.</p>
           </div>
-        </div>
-                  </div>
         </div>
       </div>
     </div>
   </div>
 
   <!-- PROJECT 03 -->
-  <div class="proj-card b reveal">
+  <div class="proj reveal">
     <div class="proj-top">
-      <div>
-        <div class="proj-num">03</div>
-        <div class="proj-ttl">Gartner Analyst Relations</div>
-        <div class="proj-contrib">Contribution: 95%</div>
-      </div>
-      <div class="proj-tags">
-        <span class="ptag">Analyst Relations</span>
-        <span class="ptag">Stakeholder Comms</span>
-        <span class="ptag">B2B</span>
-      </div>
+      <div><div class="proj-num">03</div><div class="proj-ttl">Gartner Analyst Relations</div><div class="proj-contrib">Contribution: 95%</div></div>
+      <div class="proj-tags"><span class="ptag">Analyst Relations</span><span class="ptag">Stakeholder Comms</span><span class="ptag">B2B</span></div>
     </div>
     <div class="proj-grid">
       <div>
         <span class="proj-lbl">Background</span>
-        <p class="proj-txt">Global recognition in cybersecurity requires more than marketing — it requires the endorsement of authoritative decision-makers like Gartner analysts, whose reports directly influence enterprise buying decisions worldwide.</p>
+        <p class="proj-txt">Global recognition in cybersecurity requires the endorsement of authoritative decision-makers like Gartner analysts, whose reports directly influence enterprise buying decisions worldwide.</p>
         <span class="proj-lbl">Goal</span>
         <p class="proj-txt">Establish a regular cadence of product briefings with Gartner analysts to build visibility toward inclusion in global cybersecurity reports.</p>
         <span class="proj-lbl">Approach</span>
-        <p class="proj-txt">Prepared for each meeting by studying product specs with PMs and deepening knowledge of cybersecurity, cloud, and data concepts beyond typical marketing scope. Led with genuine curiosity and respect — building rapport rather than pitching.</p>
+        <p class="proj-txt">Prepared by studying product specs with PMs and deepening knowledge of cybersecurity and cloud concepts. Led meetings with genuine curiosity — building rapport rather than pitching.</p>
       </div>
       <div>
         <span class="proj-lbl">Lesson Learned</span>
-        <p class="proj-txt">The goal was to get listed in a Gartner report. But the way to get there was to stop acting like it. Analysts respond to authenticity and expertise, not sales tactics. Learning to separate your objective from your behavior in the room was the real skill.</p>
+        <p class="proj-txt">The goal was to get listed in a Gartner report. But the way to get there was to stop acting like it. Analysts respond to authenticity and expertise, not sales tactics.</p>
         <div class="result-box">
           <span class="result-lbl">Result</span>
           <div class="result-row">
@@ -511,137 +397,96 @@ footer p { font-family:'DM Mono',monospace; font-size:0.6rem; color:rgba(255,253
             <div class="result-item"><span class="result-num">3x</span><span class="result-desc">Avg Meetings/Quarter</span></div>
           </div>
         </div>
-        
-        <div style="margin-top:1rem; padding:1.2rem; border-radius:14px; border:2px solid #5BBFEA; background:#fffdf9;">
-          <p style="font-family:'DM Mono',monospace; font-size:0.6rem; color:#5BBFEA; letter-spacing:0.12em; text-transform:uppercase; margin:0 0 0.8rem 0;">Avg Meetings / Quarter</p>
-          <div style="display:flex; align-items:flex-end; gap:1.5rem;">
-            <div style="display:flex; align-items:flex-end; gap:8px; flex-shrink:0;">
-              <div style="display:flex; flex-direction:column; align-items:center; gap:3px;">
-                <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">2</p>
-                <div style="width:36px; height:26px; background:#A8D8F0; border-radius:3px 3px 0 0;"></div>
-                <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">Before</p>
-              </div>
-              <div style="display:flex; flex-direction:column; align-items:center; gap:3px;">
-                <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#5BBFEA; margin:0;">6</p>
-                <div style="width:36px; height:76px; background:#5BBFEA; border-radius:3px 3px 0 0;"></div>
-                <p style="font-family:'DM Mono',monospace; font-size:0.5rem; color:#aaa; margin:0;">After</p>
-              </div>
+        <div class="graph-box">
+          <p class="graph-lbl">Avg Meetings / Quarter</p>
+          <div style="display:flex;align-items:flex-end;gap:1.5rem;">
+            <div style="display:flex;align-items:flex-end;gap:8px;flex-shrink:0;">
+              <div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#bbb;margin:0;">2</p><div style="width:36px;height:26px;background:#f0f0f0;border-radius:3px 3px 0 0;"></div><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#bbb;margin:0;">Before</p></div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#FF8FAB;margin:0;">6</p><div style="width:36px;height:76px;background:#FFB3C6;border-radius:3px 3px 0 0;"></div><p style="font-family:'DM Mono',monospace;font-size:0.5rem;color:#bbb;margin:0;">After</p></div>
             </div>
-            <p style="font-family:'Nunito',sans-serif; font-size:0.82rem; color:#555; line-height:1.6; margin:0;"><span style="font-weight:800; color:#5BBFEA;">3x</span> increase in quarterly analyst engagement — 10 meetings total conducted.</p>
-          </div>
-        </div>
+            <p style="font-family:'Nunito',sans-serif;font-size:0.82rem;color:#555;line-height:1.6;margin:0;"><strong style="color:#FF8FAB;">3x</strong> increase in quarterly analyst engagement — 10 meetings total conducted.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="sec" style="background:#fffdf9;">
+<section id="skills" class="sec" style="background:#fff;">
   <div class="sec-label">Skills</div>
   <h2 class="sec-title reveal">What I Do.</h2>
   <div class="skills-grid reveal">
-    <div class="sg b">
-      <div class="sg-title">Data & Tech</div>
-      <div class="sk-list">
-        <span class="sk">Google Analytics (GA4)</span>
-        <span class="sk">BigQuery</span>
-        <span class="sk">SQL / Python</span>
-        <span class="sk">Semrush</span>
-        <span class="sk">AI Tools (Claude, ChatGPT)</span>
-        <span class="sk">Full-stack (Flutter, NestJS)</span>
-      </div>
-    </div>
-    <div class="sg">
-      <div class="sg-title">Growth & Content</div>
-      <div class="sk-list">
-        <span class="sk">SEO / GEO Strategy</span>
-        <span class="sk">B2B & B2C Campaign Management</span>
-        <span class="sk">Content Marketing</span>
-        <span class="sk">Newsletter Marketing</span>
-        <span class="sk">PR & Media Relations</span>
-        <span class="sk">Award & Event Management</span>
-        <span class="sk">WordPress Website Management</span>
-      </div>
-    </div>
-    <div class="sg y">
-      <div class="sg-title">Platforms & Ads</div>
-      <div class="sk-list">
-        <span class="sk">LinkedIn Ads</span>
-        <span class="sk">Google Search Ads</span>
-        <span class="sk">Meta Ads</span>
-        <span class="sk">TikTok Ads</span>
-        <span class="sk">Apple Ads</span>
-        <span class="sk">KakaoTalk</span>
-      </div>
-    </div>
+    <div class="sg"><div class="sg-title">Data & Tech</div><div class="sk-list"><span class="sk">Google Analytics (GA4)</span><span class="sk">Google Tag Manager</span><span class="sk">Google Search Console</span><span class="sk">BigQuery · SQL · Python</span><span class="sk">Semrush</span><span class="sk">Website Management</span></div></div>
+    <div class="sg"><div class="sg-title">Growth & Content</div><div class="sk-list"><span class="sk">SEO / GEO Strategy</span><span class="sk">Content Structure Optimization</span><span class="sk">Newsletter Marketing</span><span class="sk">PR & Media Relations</span><span class="sk">Award & Event Management</span><span class="sk">Prompt Engineering</span></div></div>
+    <div class="sg"><div class="sg-title">Platforms & Ads</div><div class="sk-list"><span class="sk">Google Ads</span><span class="sk">Meta Ads · TikTok Ads · Apple Ads</span><span class="sk">KakaoTalk · Instagram · Naver Blog</span><span class="sk">Gemini · ChatGPT · Claude AI</span></div></div>
   </div>
 </section>
 
 <!-- CERTS -->
-<section id="certs" class="sec" style="background:#faf8f5;">
+<section id="certs" class="sec" style="background:#fafafa;">
   <div class="sec-label">Certifications</div>
   <h2 class="sec-title reveal">Certified.</h2>
   <div class="cert-grid reveal">
-    <div class="cert p"><div class="cert-ico">LI</div><div><div class="cert-name">LinkedIn Advertising Fundamentals Certification</div><div class="cert-issuer">LinkedIn Marketing Labs · 2026</div></div></div>
+    <div class="cert"><div class="cert-ico">LI</div><div><div class="cert-name">LinkedIn Advertising Fundamentals</div><div class="cert-issuer">LinkedIn Marketing Labs · 2026</div></div></div>
     <div class="cert"><div class="cert-ico">G</div><div><div class="cert-name">Google Ads Search Certification</div><div class="cert-issuer">Google Digital Academy (Skillshop) · 2026</div></div></div>
-    <div class="cert p"><div class="cert-ico">G</div><div><div class="cert-name">Google Analytics Certification</div><div class="cert-issuer">Google Digital Academy (Skillshop) · 2026</div></div></div>
+    <div class="cert"><div class="cert-ico">G</div><div><div class="cert-name">Google Analytics Certification</div><div class="cert-issuer">Google Digital Academy (Skillshop) · 2026</div></div></div>
   </div>
 </section>
 
-<!-- GLOBAL -->
-<section id="global" class="sec" style="background:#fffdf9;">
+<!-- GLOBAL + LANGUAGES -->
+<section id="global" class="sec" style="background:#fff;">
   <div class="sec-label">Global Background</div>
   <h2 class="sec-title reveal">12+ Years.<br>4 Countries.<br>3 Languages.</h2>
   <div class="global-grid reveal">
-    <div class="tl"><span class="tl-flag">NORTH CAROLINA, USA</span><div class="tl-period">2008 — 2012</div><div class="tl-loc">English: Native Level</div><div class="tl-desc">Elementary school in English. The foundation of native-level fluency built young.</div></div>
-    <div class="tl y"><span class="tl-flag">ABU DHABI, UAE</span><div class="tl-period">2014 — 2018</div><div class="tl-loc">English: Native Level</div><div class="tl-desc">Middle and high school entirely in English. Multicultural instincts developed in one of the world's most diverse cities.</div></div>
-    <div class="tl p"><span class="tl-flag">TOKYO, JAPAN</span><div class="tl-period">2018 — 2022</div><div class="tl-loc">Japanese: Conversational</div><div class="tl-desc">B.A. at Keio University under Prof. Jun Murai. Developed professional Japanese through academics and work.</div></div>
-    <div class="tl p2"><span class="tl-flag">SEOUL, KOREA</span><div class="tl-period">2022 — Present</div><div class="tl-loc">Korean: Native</div><div class="tl-desc">Building a global marketing career at the intersection of tech, data, and cross-cultural communication.</div></div>
-
+    <div class="tl"><span class="tl-flag">North Carolina, USA</span><div class="tl-period">2008 — 2012</div><span class="tl-lang">English foundation</span><div class="tl-desc">Elementary school in English. The foundation of native-level fluency built young.</div></div>
+    <div class="tl"><span class="tl-flag">Abu Dhabi, UAE</span><div class="tl-period">2014 — 2018</div><span class="tl-lang">English native-level</span><div class="tl-desc">Middle and high school entirely in English in one of the world's most diverse cities.</div></div>
+    <div class="tl"><span class="tl-flag">Tokyo, Japan</span><div class="tl-period">2018 — 2022</div><span class="tl-lang">Japanese professional</span><div class="tl-desc">B.A. at Keio University under Prof. Jun Murai. Developed professional Japanese.</div></div>
+    <div class="tl"><span class="tl-flag">Seoul, Korea</span><div class="tl-period">2022 — Present</div><span class="tl-lang">Korean native</span><div class="tl-desc">Building a global marketing career at the intersection of tech, data, and culture.</div></div>
   </div>
-
+  <div class="lang-grid reveal" style="margin-top:1px;">
+    <div class="lang"><span class="lang-flag">🇺🇸</span><div class="lang-name">English</div><div class="lang-lvl">Native-level · 12+ Years</div></div>
+    <div class="lang"><span class="lang-flag">🇰🇷</span><div class="lang-name">Korean</div><div class="lang-lvl">Native</div></div>
+    <div class="lang"><span class="lang-flag">🇯🇵</span><div class="lang-name">Japanese</div><div class="lang-lvl">Professional Working</div></div>
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="sec" style="background:#faf8f5;">
+<section id="contact" class="sec" style="background:#fafafa;">
   <div class="sec-label">Contact</div>
   <div class="contact-grid">
     <div class="reveal">
-      <h2 class="contact-big">Let's<br><span class="cp">Talk.</span></h2>
+      <h2 class="contact-big">Let's<br><span>Talk.</span></h2>
       <p class="contact-sub">Open to global marketing, account management, and social marketing roles at global tech companies operating in Korea.</p>
     </div>
     <div class="c-links reveal">
-      <a href="https://sy-jun-g.github.io/global-marketing-portfolio-en/" class="c-link"><div><span class="c-lbl">Email</span><span class="c-val"><span class="__cf_email__" data-cfemail="fc9b99988b8bccccbc9b919d9590d29f9391">gedww00@gmail.com</span></span></div></a>
-      <a href="https://linkedin.com/in/seo-yeon-jung-544682373" target="_blank" class="c-link b"><div><span class="c-lbl">LinkedIn</span><span class="c-val">linkedin.com/in/seo-yeon-jung</span></div></a>
+      <a href="mailto:gedww00@gmail.com" class="c-link"><div><span class="c-lbl">Email</span><span class="c-val">gedww00@gmail.com</span></div></a>
+      <a href="https://linkedin.com/in/seo-yeon-jung-544682373" target="\_blank" class="c-link"><div><span class="c-lbl">LinkedIn</span><span class="c-val">linkedin.com/in/seo-yeon-jung</span></div></a>
     </div>
   </div>
 </section>
 
-
 <!-- AI NOTE -->
 <div id="ai-note">
-  <div class="ab ab1"></div><div class="ab ab2"></div><div class="ab ab3"></div>
   <div class="ai-lbl">✦ AI-Assisted Portfolio</div>
   <h2 class="ai-title">Built With<br><span>AI Tools.</span></h2>
   <p class="ai-txt">This portfolio was built in collaboration with AI tools. It reflects my belief that great marketers in 2026 don't just use AI as a tool, but as a creative partner to move faster and think bigger.</p>
   <div class="ai-tags">
-    <span class="ai-tag">AI Tools</span>
-    <span class="ai-tag">Resume Writing</span>
-    <span class="ai-tag">Content Strategy</span>
-    <span class="ai-tag">Portfolio Design</span>
-    <span class="ai-tag">LinkedIn Optimization</span>
-    <span class="ai-tag">Cover Letter Generation</span>
+    <span class="ai-tag">Gemini</span><span class="ai-tag">ChatGPT</span><span class="ai-tag">Claude AI</span><span class="ai-tag">Resume Writing</span><span class="ai-tag">Content Strategy</span><span class="ai-tag">Portfolio Design</span>
   </div>
 </div>
 
 
 <footer>
-  <p>© 2026 Seo yeon Jung (Wawa) · Seoul, Korea</p>
-  <p>Built in collaboration with AI tools 🐰</p>
+  <p>© 2026 Seo yeon Jung · Seoul, Korea</p>
+  <p>Built with AI Tools</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-const obs
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:0.1});
+document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+</script>
+</body>
+</html>
