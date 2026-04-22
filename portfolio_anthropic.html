@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seo yeon Jung — AI Builder & Global Marketer</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@300;400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:#ffffff;color:#1a1a1a;font-family:'Nunito',sans-serif;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #f0f0f0;}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.08em;color:#1a1a1a;text-decoration:none;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{color:#999;text-decoration:none;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;transition:color 0.2s;}
+.nav-links a:hover{color:#1a1a1a;}
+.nav-badge{font-family:'DM Mono',monospace;font-size:0.62rem;color:#D97706;border:1px solid #D97706;padding:0.3rem 0.8rem;border-radius:20px;background:rgba(217,119,6,0.08);}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:8rem 4rem 6rem;background:#ffffff;position:relative;}
+.hero-line{position:absolute;right:4rem;top:50%;transform:translateY(-50%);width:1px;height:200px;background:linear-gradient(to bottom,transparent,#D97706,transparent);}
+.hero-tag{font-family:'DM Mono',monospace;font-size:0.72rem;color:#999;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.7s ease 0.1s forwards;}
+.hero-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,10vw,130px);line-height:0.9;letter-spacing:-0.01em;color:#1a1a1a;margin-bottom:1.2rem;opacity:0;animation:fadeUp 0.7s ease 0.3s forwards;}
+.hero-name span{color:#D97706;}
+.hero-sub{font-size:1.1rem;color:#666;max-width:560px;line-height:1.75;font-weight:400;margin-bottom:2.5rem;opacity:0;animation:fadeUp 0.7s ease 0.5s forwards;}
+.hero-stats{display:flex;gap:3rem;margin-bottom:3rem;opacity:0;animation:fadeUp 0.7s ease 0.7s forwards;}
+.hero-stat-n{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:#1a1a1a;line-height:1;}
+.hero-stat-l{font-family:'DM Mono',monospace;font-size:0.6rem;color:#999;letter-spacing:0.1em;text-transform:uppercase;margin-top:0.2rem;}
+.hero-cta{display:flex;gap:1rem;opacity:0;animation:fadeUp 0.7s ease 0.9s forwards;margin-bottom:3rem;}
+.btn-p{background:#1a1a1a;color:#fff;padding:0.9rem 2.2rem;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.82rem;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;border-radius:8px;}
+.btn-o{color:#1a1a1a;border:1.5px solid #1a1a1a;padding:0.9rem 2.2rem;font-size:0.82rem;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;border-radius:8px;font-weight:800;}
+
+/* MARQUEE */
+.mq-wrap{overflow:hidden;padding:1rem 0;background:#fafafa;border-top:1px solid #f0f0f0;border-bottom:1px solid #f0f0f0;}
+.mq{display:flex;gap:3rem;animation:marquee 25s linear infinite;white-space:nowrap;}
+.mq span{font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.1em;color:#bbb;flex-shrink:0;text-transform:uppercase;}
+.mq span.ac{color:#D97706;}
+
+/* SECTIONS */
+.sec{padding:7rem 4rem;}
+.sec-label{font-family:'DM Mono',monospace;font-size:0.68rem;color:#D97706;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.8rem;display:flex;align-items:center;gap:0.8rem;}
+.sec-label::before{content:'';display:block;width:24px;height:1px;background:#D97706;}
+.sec-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5.5vw,68px);line-height:0.95;letter-spacing:-0.01em;margin-bottom:3.5rem;color:#1a1a1a;}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:300px 1fr 1fr;gap:4rem;align-items:start;}
+.profile-img{width:260px;height:260px;border-radius:16px;overflow:hidden;border:1px solid #f0f0f0;}
+.profile-img img{width:100%;height:100%;object-fit:cover;}
+.about-p{color:#555;font-size:1rem;line-height:1.85;margin-bottom:1.2rem;}
+.about-p strong{color:#1a1a1a;font-weight:800;}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#f0f0f0;}
+.stat{background:#fff;padding:1.5rem;}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;line-height:1;color:#1a1a1a;}
+.stat-n span{color:#D97706;}
+.stat-l{font-size:0.7rem;color:#999;text-transform:uppercase;letter-spacing:0.08em;margin-top:0.4rem;font-weight:700;}
+
+/* EXPERIENCE */
+.exp{border-top:1px solid #f0f0f0;padding:2.5rem 0;}
+.exp-hd{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.2rem;}
+.exp-co{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.05em;color:#1a1a1a;}
+.exp-pd{font-family:'DM Mono',monospace;font-size:0.65rem;color:#bbb;letter-spacing:0.08em;}
+.exp-rl{font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:#D97706;margin-top:0.3rem;}
+.exp-bullets{display:flex;flex-direction:column;gap:0.6rem;}
+.exp-bullet{font-size:0.92rem;color:#444;display:flex;gap:0.8rem;line-height:1.65;}
+.exp-bullet::before{content:'—';color:#D97706;flex-shrink:0;font-family:'DM Mono',monospace;}
+.exp-bullet strong{color:#1a1a1a;font-weight:800;}
+.kpis{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem;}
+.kpi{font-family:'DM Mono',monospace;font-size:0.65rem;padding:0.3rem 0.75rem;border-radius:20px;background:#fafafa;color:#666;border:1px solid #f0f0f0;}
+
+/* PROJECTS */
+.proj{border:1px solid #f0f0f0;border-radius:16px;padding:2.5rem;margin-bottom:1rem;transition:border-color 0.3s;}
+.proj:hover{border-color:#D97706;}
+.proj-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;}
+.proj-num{font-family:'Bebas Neue',sans-serif;font-size:3rem;line-height:1;color:#f0f0f0;}
+.proj-ttl{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.05em;color:#1a1a1a;margin-top:0.2rem;}
+.proj-contrib{font-family:'DM Mono',monospace;font-size:0.6rem;color:#bbb;letter-spacing:0.1em;margin-top:0.3rem;}
+.proj-tags{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:flex-start;}
+.ptag{font-family:'DM Mono',monospace;font-size:0.62rem;padding:0.3rem 0.8rem;border-radius:20px;background:#fafafa;color:#666;border:1px solid #f0f0f0;}
+.ptag.ai{background:rgba(217,119,6,0.1);color:#D97706;border-color:#D97706;}
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;}
+.proj-lbl{font-family:'DM Mono',monospace;font-size:0.6rem;color:#D97706;letter-spacing:0.15em;text-transform:uppercase;display:block;margin-bottom:0.4rem;margin-top:1.2rem;}
+.proj-lbl:first-child{margin-top:0;}
+.proj-txt{font-size:0.9rem;color:#555;line-height:1.75;}
+.proj-txt strong{color:#1a1a1a;font-weight:800;}
+.result-box{background:#fafafa;border-radius:12px;padding:1.2rem;margin-top:1.2rem;border:1px solid #f0f0f0;}
+.result-lbl{font-family:'DM Mono',monospace;font-size:0.6rem;color:#D97706;letter-spacing:0.15em;text-transform:uppercase;display:block;margin-bottom:0.8rem;}
+.result-row{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.result-num{font-family:'Bebas Neue',sans-serif;font-size:2rem;line-height:1;display:block;color:#1a1a1a;}
+.result-desc{font-size:0.65rem;color:#999;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;display:block;margin-top:0.2rem;}
+.proj-screenshot{width:100%;border-radius:12px;border:1px solid #f0f0f0;margin-top:1.2rem;overflow:hidden;}
+.proj-screenshot img{width:100%;display:block;}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#f0f0f0;}
+.sg{background:#fff;padding:2rem;}
+.sg-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.08em;color:#D97706;margin-bottom:1.2rem;}
+.sk-list{display:flex;flex-direction:column;gap:0.5rem;}
+.sk{font-size:0.85rem;color:#555;display:flex;align-items:center;gap:0.5rem;font-weight:600;}
+.sk::before{content:'—';font-family:'DM Mono',monospace;font-size:0.6rem;color:#D97706;}
+
+/* GLOBAL */
+.global-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#f0f0f0;margin-bottom:1px;}
+.tl{background:#fff;padding:2rem;}
+.tl-flag{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.06em;color:#1a1a1a;display:block;margin-bottom:0.3rem;}
+.tl-period{font-family:'DM Mono',monospace;font-size:0.62rem;color:#bbb;letter-spacing:0.1em;margin-bottom:0.3rem;}
+.tl-lang{font-family:'DM Mono',monospace;font-size:0.65rem;color:#D97706;letter-spacing:0.08em;margin-bottom:0.5rem;display:block;}
+.tl-desc{font-size:0.84rem;color:#666;line-height:1.65;}
+.lang-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#f0f0f0;}
+.lang{background:#fff;padding:1.8rem 2rem;text-align:center;}
+.lang-flag{font-size:2rem;display:block;margin-bottom:0.6rem;}
+.lang-name{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:0.06em;color:#1a1a1a;margin-bottom:0.3rem;}
+.lang-lvl{font-family:'DM Mono',monospace;font-size:0.58rem;color:#bbb;letter-spacing:0.12em;text-transform:uppercase;}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.contact-big{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,7vw,90px);line-height:0.9;color:#1a1a1a;}
+.contact-big span{color:#D97706;display:block;}
+.contact-sub{font-size:0.9rem;color:#888;margin-top:1.5rem;line-height:1.7;max-width:360px;}
+.c-links{display:flex;flex-direction:column;gap:1px;background:#f0f0f0;}
+.c-link{display:flex;align-items:center;gap:1rem;text-decoration:none;padding:1.4rem 1.8rem;background:#fff;color:#1a1a1a;}
+.c-lbl{font-family:'DM Mono',monospace;font-size:0.58rem;color:#bbb;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:0.2rem;}
+.c-val{font-size:0.88rem;font-weight:700;color:#1a1a1a;}
+
+footer{background:#fafafa;padding:1.8rem 4rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #f0f0f0;}
+footer p{font-family:'DM Mono',monospace;font-size:0.6rem;color:#bbb;letter-spacing:0.1em;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem;}
+  .sec{padding:5rem 1.5rem;}
+  #hero{padding:7rem 1.5rem 4rem;}
+  .about-grid,.contact-grid,.global-grid,.skills-grid,.lang-grid,.proj-grid{grid-template-columns:1fr;}
+  .nav-links{display:none;}
+  .hero-stats{gap:1.5rem;flex-wrap:wrap;}
+  .hero-line{display:none;}
+  footer{padding:1.5rem;flex-direction:column;gap:0.5rem;text-align:center;}
+  #about-grid{grid-template-columns:1fr!important;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">SEO YEON JUNG</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Work</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <span class="nav-badge">✦ 3+ Years · LLM APIs</span>
+</nav>
+
+<section id="hero">
+  <div class="hero-line"></div>
+  <div class="hero-tag">✦ LLM API Builder & Global Marketer · Seoul, Korea</div>
+  <h1 class="hero-name">Seo yeon<br><span>Jung.</span></h1>
+  <p class="hero-sub">3+ years working with LLM APIs — from building ChatGPT-powered products at a startup to deploying Claude API automation tools in production. I understand AI from the inside out, and I use that to drive real marketing outcomes. Native-level English and Korean, backed by 12+ years across the US, UAE, and Japan.</p>
+  <div class="hero-stats">
+    <div><div class="hero-stat-n">3<span style="font-size:1.2rem;">+</span></div><div class="hero-stat-l">Years · LLM API Experience</div></div>
+    <div><div class="hero-stat-n">93<span style="font-size:1.2rem;">%</span></div><div class="hero-stat-l">Ad CPA Reduction</div></div>
+    <div><div class="hero-stat-n">40<span style="font-size:1.2rem;">%</span></div><div class="hero-stat-l">YoY AI Traffic Growth</div></div>
+    <div><div class="hero-stat-n">11<span style="font-size:1.2rem;">/11</span></div><div class="hero-stat-l">Global Award Wins</div></div>
+  </div>
+  <div class="hero-cta">
+    <a href="#projects" class="btn-p">See My Builds</a>
+    <a href="#contact" class="btn-o">Get in Touch</a>
+  </div>
+</section>
+
+<div class="mq-wrap">
+  <div class="mq">
+    <span class="ac">✦</span><span>Claude API</span><span class="ac">✦</span><span>AI Automation</span><span class="ac">✦</span><span>Lead Qualification</span><span class="ac">✦</span><span>CRM Management</span><span class="ac">✦</span><span>Global Marketing</span><span class="ac">✦</span><span>English · Korean · Japanese</span><span class="ac">✦</span><span>NestJS · MySQL · Python</span><span class="ac">✦</span><span>Prompt Engineering</span>
+    <span class="ac">✦</span><span>Claude API</span><span class="ac">✦</span><span>AI Automation</span><span class="ac">✦</span><span>Lead Qualification</span><span class="ac">✦</span><span>CRM Management</span><span class="ac">✦</span><span>Global Marketing</span><span class="ac">✦</span><span>English · Korean · Japanese</span><span class="ac">✦</span><span>NestJS · MySQL · Python</span><span class="ac">✦</span><span>Prompt Engineering</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="sec" style="background:#fafafa;">
+  <div class="sec-label">About</div>
+  <h2 class="sec-title reveal">The Builder<br>Behind the Work.</h2>
+  <div class="about-grid" id="about-grid">
+    <div class="reveal" style="display:flex;justify-content:center;">
+      <div class="profile-img"><img src="images/profile.jpg" alt="Seo yeon Jung"></div>
+    </div>
+    <div class="reveal">
+      <p class="about-p">I'm <strong>Seo yeon Jung</strong>, a global marketer with a developer foundation. I started as a junior developer building APIs and AI products, transitioned into marketing — and never stopped building.</p>
+      <p class="about-p">I've been working with LLM APIs for <strong>3+ years</strong> — starting with ChatGPT API at a startup, now deploying Claude API tools in production. I understand AI from the architecture level up, which means I can work with engineers, speak the language of the products I'm selling, and genuinely empathize with the customers using them.</p>
+      <p class="about-p">I'm also a genuine Claude power user — it's the tool I reach for first, every day. That's not a talking point. It's just true.</p>
+    </div>
+    <div class="stats-grid reveal">
+      <div class="stat"><div class="stat-n">3<span>+</span></div><div class="stat-l">Years LLM API Exp.</div></div>
+      <div class="stat"><div class="stat-n">3<span>+</span></div><div class="stat-l">Years Marketing</div></div>
+      <div class="stat"><div class="stat-n">~58<span>%</span></div><div class="stat-l">SNS Growth</div></div>
+      <div class="stat"><div class="stat-n">93<span>%</span></div><div class="stat-l">CPA Reduction</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="sec" style="background:#fff;">
+  <div class="sec-label">Experience</div>
+  <h2 class="sec-title reveal">Work.</h2>
+  <div class="exp reveal">
+    <div class="exp-hd">
+      <div><div class="exp-co">Penta Security</div><div class="exp-rl">Global Marketer</div></div>
+      <div style="text-align:right;"><span class="exp-pd">Jul 2025 — Present</span></div>
+    </div>
+    <div class="exp-bullets">
+      <div class="exp-bullet"><strong>B2B lead classifier (Claude API, 100% solo build):</strong> Designed and deployed a web app that classifies inbound leads by industry, company size, and location — enabling daily handoff of qualified leads to the sales team.</div>
+      <div class="exp-bullet"><strong>Ad insights automation (in development):</strong> Building a Claude API-powered tool to automatically surface actionable ad performance insights from raw campaign data.</div>
+      <div class="exp-bullet"><strong>CRM operations (ActiveCampaign):</strong> Managed lead capture, segmentation, and monthly newsletter delivery for a global B2B audience.</div>
+      <div class="exp-bullet"><strong>AI Search Traffic +40% YoY:</strong> Restructured English content formats using Google Search Console, Tag Manager, and GA4.</div>
+      <div class="exp-bullet"><strong>Ad CPA reduced 93%:</strong> Identified audience mismatch and shifted to content-objective targeting (KRW 30K to KRW 2K).</div>
+      <div class="exp-bullet"><strong>100% global award win rate (11/11):</strong> Independently prepared all submissions for Globee and Cybersecurity Excellence Awards.</div>
+    </div>
+    <div class="kpis">
+      <span class="kpi">Claude API</span><span class="kpi">ActiveCampaign</span><span class="kpi">Lead Qualification</span><span class="kpi">GA4</span><span class="kpi">Google Tag Manager</span><span class="kpi">SEO/GEO</span>
+    </div>
+  </div>
+  <div class="exp reveal">
+    <div class="exp-hd">
+      <div><div class="exp-co">JamCoding</div><div class="exp-rl">Head of English Coding Education</div></div>
+      <div style="text-align:right;"><span class="exp-pd">Dec 2023 — Jun 2025</span></div>
+    </div>
+    <div class="exp-bullets">
+      <div class="exp-bullet"><strong>Client relationship management:</strong> Conducted regular check-ins with parents and school partners to gather feedback and drive retention.</div>
+      <div class="exp-bullet"><strong>Enrollment +200% organic only:</strong> Built brand positioning via Instagram and Naver Blog — zero paid media.</div>
+    </div>
+    <div class="kpis">
+      <span class="kpi">Client Relations</span><span class="kpi">SNS Marketing</span><span class="kpi">B2C</span>
+    </div>
+  </div>
+  <div class="exp reveal">
+    <div class="exp-hd">
+      <div><div class="exp-co">Metadexter</div><div class="exp-rl">Junior Developer & AI Researcher</div></div>
+      <div style="text-align:right;"><span class="exp-pd">Nov 2022 — Dec 2023</span></div>
+    </div>
+    <div class="exp-bullets">
+      <div class="exp-bullet"><strong>AI solution proposal in client meeting:</strong> Proposed and implemented a ChatGPT API-powered tour guide chatbot in a B2B client meeting — directly influencing product direction.</div>
+      <div class="exp-bullet"><strong>API architecture:</strong> Built REST APIs with NestJS and MySQL for mobile app data transmission and storage.</div>
+    </div>
+    <div class="kpis">
+      <span class="kpi">NestJS</span><span class="kpi">MySQL</span><span class="kpi">ChatGPT API</span><span class="kpi">Flutter</span><span class="kpi">SQL</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="sec" style="background:#fafafa;">
+  <div class="sec-label">Projects</div>
+  <h2 class="sec-title reveal">Selected<br>Builds.</h2>
+
+  <!-- PROJECT 01 -->
+  <div class="proj reveal">
+    <div class="proj-top">
+      <div><div class="proj-num">01</div><div class="proj-ttl">B2B Lead Classifier</div><div class="proj-contrib">Contribution: 100%</div></div>
+      <div class="proj-tags"><span class="ptag ai">✦ Claude API</span><span class="ptag">Lead Qualification</span><span class="ptag">Sales Enablement</span><span class="ptag">Automation</span></div>
+    </div>
+    <div class="proj-grid">
+      <div>
+        <span class="proj-lbl">Problem</span>
+        <p class="proj-txt">Daily inbound inquiries and file downloads needed manual review to identify real B2B leads — a time-consuming process that delayed handoff to the sales team.</p>
+        <span class="proj-lbl">Solution</span>
+        <p class="proj-txt">Built a web app from scratch using <strong>Claude API</strong> that ingests CSV exports, classifies each entry by industry, company size, and location, and outputs qualified B2B leads directly to Google Sheets for the sales team.</p>
+        <span class="proj-lbl">Stack</span>
+        <p class="proj-txt">Claude API · Python · Google Sheets API · CSV parsing · Prompt engineering</p>
+      </div>
+      <div>
+        <span class="proj-lbl">Impact</span>
+        <p class="proj-txt">Eliminated daily manual lead review. Sales team receives a clean, classified lead list every morning — enabling faster outreach and reducing time spent on non-B2B noise.</p>
+        <div class="result-box">
+          <span class="result-lbl">Result</span>
+          <div class="result-row">
+            <div class="result-item"><span class="result-num">100%</span><span class="result-desc">Solo Build</span></div>
+            <div class="result-item"><span class="result-num">Daily</span><span class="result-desc">Automated Lead Handoff</span></div>
+          </div>
+        </div>
+        <div class="proj-screenshot">
+          <img src="b2b_classifier.webp" alt="B2B Lead Classifier screenshot">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 02 -->
+  <div class="proj reveal">
+    <div class="proj-top">
+      <div><div class="proj-num">02</div><div class="proj-ttl">Google Ads Keyword Reporter</div><div class="proj-contrib">Contribution: 100%</div></div>
+      <div class="proj-tags"><span class="ptag ai">✦ Automation</span><span class="ptag">Google Ads</span><span class="ptag">Reporting</span></div>
+    </div>
+    <div class="proj-grid">
+      <div>
+        <span class="proj-lbl">Problem</span>
+        <p class="proj-txt">Organizing and reporting Google Ads keyword performance data required manual sorting and copy-pasting into spreadsheets — slow and error-prone.</p>
+        <span class="proj-lbl">Solution</span>
+        <p class="proj-txt">Built a web app that accepts Google Ads CSV exports, lets users define campaign grouping order, and automatically pushes sorted keyword data to a designated Google Sheet.</p>
+        <span class="proj-lbl">Stack</span>
+        <p class="proj-txt">Python · Google Sheets API · CSV parsing · Custom sorting logic</p>
+      </div>
+      <div>
+        <span class="proj-lbl">Impact</span>
+        <p class="proj-txt">Eliminated repetitive manual reporting work. What used to take 30+ minutes per report now takes seconds — freeing up time for actual campaign optimization.</p>
+        <div class="result-box">
+          <span class="result-lbl">Result</span>
+          <div class="result-row">
+            <div class="result-item"><span class="result-num">100%</span><span class="result-desc">Solo Build</span></div>
+            <div class="result-item"><span class="result-num">30min+</span><span class="result-desc">Saved per Report</span></div>
+          </div>
+        </div>
+        <div class="proj-screenshot">
+          <img src="ads_reporter.webp" alt="Google Ads Keyword Reporter screenshot">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 03 -->
+  <div class="proj reveal">
+    <div class="proj-top">
+      <div><div class="proj-num">03</div><div class="proj-ttl">LinkedIn Channel Revival</div><div class="proj-contrib">Contribution: 100%</div></div>
+      <div class="proj-tags"><span class="ptag ai">✦ LLM Tools</span><span class="ptag">Paid Social</span><span class="ptag">Content Strategy</span></div>
+    </div>
+    <div class="proj-grid">
+      <div>
+        <span class="proj-lbl">Background</span>
+        <p class="proj-txt">The company's LinkedIn page had been dormant for over a year. Most followers were inactive, with posts limited to occasional event updates.</p>
+        <span class="proj-lbl">Approach</span>
+        <p class="proj-txt">Targeted cybersecurity professionals in EMEA and the US with weekly curated industry news. Used LLM tools to select trending topics and refine copy at speed. Pivoted ad strategy from follower-objective to content-objective.</p>
+      </div>
+      <div>
+        <span class="proj-lbl">Lesson Learned</span>
+        <p class="proj-txt">Dropped CPA from KRW 30,000 to KRW 2,000 by stopping the chase for followers and giving the audience what they actually wanted instead.</p>
+        <div class="result-box">
+          <span class="result-lbl">Result</span>
+          <div class="result-row">
+            <div class="result-item"><span class="result-num">~58%</span><span class="result-desc">Follower Growth</span></div>
+            <div class="result-item"><span class="result-num">93%↓</span><span class="result-desc">CPA Reduction</span></div>
+            <div class="result-item"><span class="result-num">140%</span><span class="result-desc">Newsletter KPI</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 04 -->
+  <div class="proj reveal">
+    <div class="proj-top">
+      <div><div class="proj-num">04</div><div class="proj-ttl">Newsletter Launch & Growth</div><div class="proj-contrib">Contribution: 100%</div></div>
+      <div class="proj-tags"><span class="ptag">CRM</span><span class="ptag">ActiveCampaign</span><span class="ptag">Content Strategy</span></div>
+    </div>
+    <div class="proj-grid">
+      <div>
+        <span class="proj-lbl">Background</span>
+        <p class="proj-txt">No direct communication channel with the global audience. Previous newsletter attempts were product-heavy with little engagement.</p>
+        <span class="proj-lbl">Approach</span>
+        <p class="proj-txt">Pivoted to value-first content: weekly curated cybersecurity news via ActiveCampaign. Built subscriber segments, managed campaign automation, and tracked open/click performance to continuously improve.</p>
+      </div>
+      <div>
+        <span class="proj-lbl">Lesson Learned</span>
+        <p class="proj-txt">Audiences subscribe to what helps them, not what sells to them. Consistent value delivery builds the trust that makes brand content welcome.</p>
+        <div class="result-box">
+          <span class="result-lbl">Result</span>
+          <div class="result-row">
+            <div class="result-item"><span class="result-num">140%</span><span class="result-desc">of Quarterly KPI</span></div>
+            <div class="result-item"><span class="result-num">2mo</span><span class="result-desc">to Hit 500-sub Target</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="sec" style="background:#fff;">
+  <div class="sec-label">Skills</div>
+  <h2 class="sec-title reveal">What I Do.</h2>
+  <div class="skills-grid reveal">
+    <div class="sg">
+      <div class="sg-title">AI & Automation</div>
+      <div class="sk-list">
+        <span class="sk">Claude API</span>
+        <span class="sk">ChatGPT API</span>
+        <span class="sk">Prompt Engineering</span>
+        <span class="sk">Workflow Automation</span>
+        <span class="sk">Web App Development</span>
+      </div>
+    </div>
+    <div class="sg">
+      <div class="sg-title">Marketing & CRM</div>
+      <div class="sk-list">
+        <span class="sk">ActiveCampaign · Stibee</span>
+        <span class="sk">Lead Qualification & Handoff</span>
+        <span class="sk">SEO / GEO Strategy</span>
+        <span class="sk">Google Ads · Meta · TikTok</span>
+        <span class="sk">GA4 · Tag Manager · Semrush</span>
+      </div>
+    </div>
+    <div class="sg">
+      <div class="sg-title">Development</div>
+      <div class="sk-list">
+        <span class="sk">NestJS · REST API Design</span>
+        <span class="sk">MySQL · BigQuery · SQL</span>
+        <span class="sk">Python · Flutter</span>
+        <span class="sk">Google Sheets API</span>
+        <span class="sk">App Store Deployment</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GLOBAL -->
+<section id="global" class="sec" style="background:#fafafa;">
+  <div class="sec-label">Global Background</div>
+  <h2 class="sec-title reveal">12+ Years.<br>4 Countries.<br>3 Languages.</h2>
+  <div class="global-grid reveal">
+    <div class="tl"><span class="tl-flag">North Carolina, USA</span><div class="tl-period">2008 — 2012</div><span class="tl-lang">English foundation</span><div class="tl-desc">Elementary school in English. The foundation of native-level fluency built young.</div></div>
+    <div class="tl"><span class="tl-flag">Abu Dhabi, UAE</span><div class="tl-period">2014 — 2018</div><span class="tl-lang">English native-level</span><div class="tl-desc">Middle and high school entirely in English in one of the world's most diverse cities.</div></div>
+    <div class="tl"><span class="tl-flag">Tokyo, Japan</span><div class="tl-period">2018 — 2022</div><span class="tl-lang">Japanese professional</span><div class="tl-desc">B.A. at Keio University under Prof. Jun Murai. Developed professional Japanese.</div></div>
+    <div class="tl"><span class="tl-flag">Seoul, Korea</span><div class="tl-period">2022 — Present</div><span class="tl-lang">Korean native</span><div class="tl-desc">Building a career at the intersection of AI, marketing, and cross-cultural communication.</div></div>
+  </div>
+  <div class="lang-grid reveal" style="margin-top:1px;">
+    <div class="lang"><span class="lang-flag">🇺🇸</span><div class="lang-name">English</div><div class="lang-lvl">Native-level · 12+ Years</div></div>
+    <div class="lang"><span class="lang-flag">🇰🇷</span><div class="lang-name">Korean</div><div class="lang-lvl">Native</div></div>
+    <div class="lang"><span class="lang-flag">🇯🇵</span><div class="lang-name">Japanese</div><div class="lang-lvl">Professional Working</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="sec" style="background:#fff;">
+  <div class="sec-label">Contact</div>
+  <div class="contact-grid">
+    <div class="reveal">
+      <h2 class="contact-big">Let's<br><span>Talk.</span></h2>
+      <p class="contact-sub">Open to roles at the intersection of AI, marketing, and business development — where technical understanding meets customer-facing impact.</p>
+    </div>
+    <div class="c-links reveal">
+      <a href="mailto:gedww00@gmail.com" class="c-link"><div><span class="c-lbl">Email</span><span class="c-val">gedww00@gmail.com</span></div></a>
+      <a href="https://linkedin.com/in/seo-yeon-jung-544682373" target="_blank" class="c-link"><div><span class="c-lbl">LinkedIn</span><span class="c-val">linkedin.com/in/seo-yeon-jung</span></div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Seo yeon Jung · Seoul, Korea</p>
+  <p>Built with Claude AI</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:0.1});
+document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+</script>
+</body>
+</html>
